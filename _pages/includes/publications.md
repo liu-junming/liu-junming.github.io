@@ -13,4 +13,4 @@ Anonymous authors
 </div>
 </div>
 
-- <div class="badge">arxiv</div> **How ChatGPT is Solving Vulnerability Management Problem** [\[paper\]](https://arxiv.org/abs/2311.06530) (name changed for anonymity), Anonymous authors, **arxiv**.
+- ``arxiv</div`` **How ChatGPT is Solving Vulnerability Management Problem** [\[paper\]](https://arxiv.org/abs/2311.06530) (name changed for anonymity), Anonymous authors, **arxiv**.
