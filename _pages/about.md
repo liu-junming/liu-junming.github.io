@@ -24,7 +24,7 @@ redirect_from:
 <span class='anchor' id='-publications'></span>
 {% include_relative includes/publications.md %}
 
-<span class='anchor' id='-patents-and-copyright'></span>
+<span class='anchor' id='-patents-and-copyrights'></span>
 {% include_relative includes/patents.md %}
 
 <span class='anchor' id='-honors-and-awards'></span>
