@@ -21,12 +21,16 @@ redirect_from:
 
 <!-- {% include_relative includes/news.md %} -->
 
+<span class='anchor' id='-publications'></span>
 {% include_relative includes/publications.md %}
 
+<span class='anchor' id='-patents-and-copyright'></span>
 {% include_relative includes/patents.md %}
 
+<span class='anchor' id='-honors-and-awards'></span>
 {% include_relative includes/honors.md %}
 
+<span class='anchor' id='-educations'></span>
 {% include_relative includes/educations.md %}
 
 <!-- 
