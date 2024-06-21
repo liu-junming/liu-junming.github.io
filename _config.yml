@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Junming Liu"
-description              : "Master's Student in Zhejiang University"
+description              : "Second Year Master's Student in Zhejiang University"
 repository               : "Jamrot/junmingliu.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -22,10 +22,10 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Junming Liu"
-  avatar           : "images/avatar.png"
-  bio              : 
+  avatar           : "images/avatars/avatar-cartoon-white.png"
+  bio              : "刘君茗"
   location         : "Hangzhou, China"
-  employer         :
+  employer         : "Zhejiang University"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=VWst5KEAAAAJ"
   email            : "jmliu@zju.edu.cn"
