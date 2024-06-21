@@ -5,7 +5,9 @@
 
 Exploring ChatGPT's Capabilities on Vulnerability Management [\[paper\]](https://arxiv.org/pdf/2311.06530)
 
-Peiyu Liu* (supervisor), *Junming Liu**, Lirong Fu, Kangjie Lu, et al. USENIX Security Symposium, 2024. (*co-first authors)
+Peiyu Liu* (supervisor), *Junming Liu\**, Lirong Fu, Kangjie Lu, et al. (*co-first authors)
+
+USENIX Security Symposium, 2024. 
 
 <!-- [**Project**](url) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong> -->
 - Conduct the first large-scale evaluation of ChatGPT for vulnerability management tasks
