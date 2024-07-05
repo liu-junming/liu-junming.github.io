@@ -4,7 +4,7 @@
 <div class='paper-box-image'>
 <div>
 <div class="badge">USENIX Security</div>
-<img src='images/publications/ChatGPT-workflow.png' alt="sym" width="100%">
+<img src='{{ site.baseurl }}/images/publications/ChatGPT-workflow.png' alt="sym" width="100%">
 </div>
 </div>
 <div class='paper-box-text' markdown="1">

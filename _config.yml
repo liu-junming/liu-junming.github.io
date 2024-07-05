@@ -5,6 +5,9 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
+url: "http://127.0.0.1:4000" # local url
+baseurl: ""
+
 # Site Settings
 title                    : "Junming Liu"
 description              : "Second Year Master's Student in Zhejiang University"
@@ -64,6 +67,7 @@ include:
   - .htaccess
   - _pages
   - files
+  - _posts
 exclude:
   - docs
   - google_scholar_crawler

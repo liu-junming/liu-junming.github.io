@@ -40,6 +40,8 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
+@import "post";
+
 .paper-box {
     display: flex;
     justify-content: left;
@@ -104,6 +106,7 @@ h1:before, .anchor:before {
     margin-top: .5em;
     margin-left: -.5em;
     color: white;
-    background-color: #00369f;
-    font-size: .8em;
+    background-color: $badge-color;
+    font-size: $type-size-6;
+    border: 0px solid $border-color;
 }
