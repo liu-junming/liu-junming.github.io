@@ -90,9 +90,11 @@
           
             a {
               text-decoration: underline;
+              color: $gray;
           
               &:hover {
                 text-decoration: underline;
+                color: $dark-gray;
           
                 img {
                   box-shadow: 0 0 10px rgba(#000, 0.25);
@@ -120,6 +122,14 @@
             blockquote + .small {
               margin-top: -1.5em;
               padding-left: 1.25rem;
+            }
+
+            img {
+              @include breakpoint($medium) {
+                width: 50%;
+              }
+              max-width: 100%;
+              height: auto;
             }
         }
     }
@@ -154,9 +164,12 @@
                 flex-direction: column;
                 align-items: flex-start;
     
-                h2 {
+                .post-title {
                     margin: 0;
                     font-size: $type-size-3;
+                    line-height: 1.2;
+                    font-family: $header-font-family;
+                    font-weight: bold;
                     a {
                         color: $text-color;
                         text-decoration: none;
@@ -183,14 +196,18 @@
                 .post-item {
                     flex-direction: row;
                     justify-content: space-between;
-    
-                    .post-summary {
-                        max-width: 70%;          
+
+                    .post-title {
+                      width: 35%;
                     }
-    
+                    
                     .post-meta {
-                        max-width: 25%;
-                        text-align: right;          
+                      width: 10%;          
+                    }
+
+                    .post-summary {
+                      width: 45%;
+                      text-align: right;        
                     }
                 }
             }
