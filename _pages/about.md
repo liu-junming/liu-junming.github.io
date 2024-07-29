@@ -16,8 +16,10 @@ redirect_from:
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
 <span class='anchor' id='about-me'></span>
-
 {% include_relative includes/introduction.md %}
+
+<span class='anchor' id='-educations'></span>
+{% include_relative includes/educations.md %}
 
 <!-- <span class='anchor' id='-news'></span>
 {% include_relative includes/news.md %} -->
@@ -25,14 +27,11 @@ redirect_from:
 <span class='anchor' id='-publications'></span>
 {% include_relative includes/publications.md %}
 
-<span class='anchor' id='-patents-and-copyrights'></span>
-{% include_relative includes/patents.md %}
+<!-- <span class='anchor' id='-patents-and-copyrights'></span>
+{% include_relative includes/patents.md %} -->
 
 <span class='anchor' id='-honors-and-awards'></span>
 {% include_relative includes/honors.md %}
-
-<span class='anchor' id='-educations'></span>
-{% include_relative includes/educations.md %}
 
 <!-- 
 # 💬 Invited Talks

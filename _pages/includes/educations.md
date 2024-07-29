@@ -1,3 +1,7 @@
-# 🎓 Educations
-- *2022.09 - now*, Master, Zhejiang University, Hangzhou.
-- *2018.09 - 2022.06*, Undergraduate, University of Science and Technology Beijing, Beijing.
+# Educations
+
+### Zhejiang University (2022.09 - present)
+Master of Engineering in Electronic and Information Engineering
+
+### University of Science and Technology Beijing (2018.09 - 2022.06)
+Bachelor of Engineering in Automation

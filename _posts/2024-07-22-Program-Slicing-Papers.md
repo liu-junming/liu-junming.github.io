@@ -9,6 +9,8 @@ summary: "awesome program slicing papers"
 
 - [Slicing Technique](#slicing-technique)
   - [DL-based Slicing](#dl-based-slicing)
+  - [LLM Slicing](#llm-slicing)
+  - [Program Reduction](#program-reduction)
 - [Applications](#applications)
   - [Vulnerability Detection](#vulnerability-detection)
     - [Machine Learning](#machine-learning)
@@ -28,6 +30,14 @@ summary: "awesome program slicing papers"
 - A Learning-Based Approach to Static Program Slicing. ``OOPSLA 2024`` [[paper]](https://dl.acm.org/doi/10.1145/3649814)
 *use a pre-trained language model to understand the variable-statement relationship, and predict the forward/backword propability of each statement, then construct the slicing.*
 
+## LLM Slicing
+- Revealing the Unseen: AI Chain on LLMs for Predicting Implicit Data Flows to Generate Data Flow Graphs in Dynamically-Typed Code. ``TOSEM 2024`` [[paper]](https://dl.acm.org/doi/10.1145/3672458) [[code]](https://drive.google.com/file/d/1a1pwDEPK1yod6E9recAuIkntCL0oUXOV/view?usp=drive_link)
+*use LLM directly slice python program to aid implicit data flow prediction.*
+
+## Program Reduction
+- LPR: Large Language Models-Aided Program Reduction. ``ISSTA 2024`` [[paper]](https://arxiv.org/pdf/2312.13064)
+*evaluation: reduction size, time consumed, ablation.*
+
 # Applications
 
 ## Vulnerability Detection
@@ -37,7 +47,7 @@ summary: "awesome program slicing papers"
 - 🌟 Learning Program Semantics for Vulnerability Detection via Vulnerability-Specific Inter-procedural Slicing. ``ESEC/FSE 2023`` [[paper]](https://dl.acm.org/doi/10.1145/3611643.3616351) 
 *inter-procedural, slicing strategy (criterion, direction, graph) decided by vulnerability types.*
 
-- VulChecker: Graph-based Vulnerability Localization in Source Code. ``USENIX Security 2023`` [[paper]](https://www.usenix.org/conference/usenixsecurity23/presentation/mirsky) 
+- 🌟 VulChecker: Graph-based Vulnerability Localization in Source Code. ``USENIX Security 2023`` [[paper]](https://www.usenix.org/conference/usenixsecurity23/presentation/mirsky) 
 *backward slicing on PDG until pre-defined depth, criterion decided by vulnerability types.*
 
 ### Recurring Bug
@@ -58,11 +68,17 @@ summary: "awesome program slicing papers"
 
 ## Security Patch Identification
 
-- 🌟 GraphSPD: Graph-Based Security Patch Detection with Enriched Code Semantics. ``Oakland 2023`` [[paper]](https://ieeexplore.ieee.org/document/10179479) [[website]](https://sunlab-gmu.github.io/GraphSPD/) [[code]](https://github.com/SunLab-GMU/GraphSPD)
+- GraphSPD: Graph-Based Security Patch Detection with Enriched Code Semantics. ``Oakland 2023`` [[paper]](https://ieeexplore.ieee.org/document/10179479) [[website]](https://sunlab-gmu.github.io/GraphSPD/) [[code]](https://github.com/SunLab-GMU/GraphSPD)
 *function-level bidirectional slicing on PDG based on deleted/added statements.*
+*slicing to reduce the size of patch context to assist the GNN-model in learning and identifying security patch characteristics.*
+<!-- 
+1）提出一种基于GNN用于security patch identification的模型 (PatchGNN)
+2) 提出一种graph representation (PatchCPG)，用于更好地表示patch内容
+3) 使用slicing减少PatchCPG的size
+ -->
 
 - CoLeFunDa: Explainable Silent Vulnerability Fix Identification. ``ICSE 2023`` [[paper]](https://ieeexplore.ieee.org/abstract/document/10172826)
-*data augmentation for silent fix detection (security patch identification), CWE classification and exploitability rating classification*
+*data augmentation for silent fix detection (security patch identification), CWE classification and exploitability rating classification.*
 *function-level bidirectional slicing on CFG & DFG based on changed statements.*
 
 ## Verification
@@ -72,12 +88,12 @@ summary: "awesome program slicing papers"
 ## Type Inference
 
 - DLInfer: Deep Learning with Static Slicing for Python Type Inference. ``ICSE 2023`` [[paper]](https://ieeexplore.ieee.org/abstract/document/10172544) [[code]](https://doi.org/10.5281/zenodo.7575544)
-*slicing on DFG (def-use) based on given variable.*
+*python, slicing on DFG (def-use) based on given variable.*
 
 ## Data Augmentation
 
 - CoLeFunDa: Explainable Silent Vulnerability Fix Identification. ``ICSE 2023`` [[paper]](https://ieeexplore.ieee.org/abstract/document/10172826)
-*data augmentation for silent fix detection (security patch identification), CWE classification and exploitability rating classification*
+*data augmentation for silent fix detection (security patch identification), CWE classification and exploitability rating classification.*
 *function-level bidirectional slicing on CFG & DFG based on changed statements.*
 
 ## Regression Analysis
