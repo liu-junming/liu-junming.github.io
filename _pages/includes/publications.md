@@ -14,10 +14,10 @@ In Proceedings of the 33rd USENIX Security Symposium (USENIX Security 2024)
 </div>
 
 <div class='paper-box-image'>
-    <div>
+    <!-- <div> -->
     <!-- <div class="badge">USENIX Security</div> -->
     <img src='{{ site.baseurl }}/paper/ChatGPT-VM/ChatGPT.png' alt="sym" width="100%">
-    </div>
+    <!-- </div> -->
 </div>
 
 </div>

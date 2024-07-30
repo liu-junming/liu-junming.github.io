@@ -26,6 +26,10 @@ summary: "awesome program slicing papers"
 
 # Slicing Technique
 
+## Survey
+- On the Effects of Program Slicing for Vulnerability Detection during Code Inspection: Extended Abstract. ``ICSE-Companion`` [[paper]](https://dl.acm.org/doi/10.1145/3639478.3643117)
+*1) slicing helps in finding some lines related to the vulnerability, 2) once 'some' correct lines have been identified, slicing makes no significant difference in the number of correctly identified fragments.*
+
 ## DL-based Slicing
 - A Learning-Based Approach to Static Program Slicing. ``OOPSLA 2024`` [[paper]](https://dl.acm.org/doi/10.1145/3649814)
 *use a pre-trained language model to understand the variable-statement relationship, and predict the forward/backword propability of each statement, then construct the slicing.*

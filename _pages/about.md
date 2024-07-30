@@ -33,6 +33,9 @@ redirect_from:
 <span class='anchor' id='-honors-and-awards'></span>
 {% include_relative includes/honors.md %}
 
+<span class='anchor' id='-personal'></span>
+{% include_relative includes/personal.md %}
+
 <!-- 
 # 💬 Invited Talks
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 

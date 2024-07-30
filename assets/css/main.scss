@@ -51,7 +51,6 @@
     border-bottom: 1px #efefef solid;
     padding: 0em 0 1em 0;
     
-
     .paper-box-image{
         justify-content: center;
         display: flex;
@@ -94,10 +93,52 @@
             max-width: 70%;
             order: 1;
         }
-
     }
+}
 
-
+.personal-box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px #efefef solid;
+    padding: 0em 0 1em 0;
+    
+    .personal-box-image{
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        order: 2;
+        // overflow-x: scroll;
+        img {
+            max-width: 400px;
+            // box-shadow: 1px 1px 2px #888;
+            border: 2px mix(#fff, $badge-color, 50%) solid;
+            object-fit: cover;
+        }
+    }
+    
+    .personal-box-text{
+        max-width: 100%;
+        order: 1;
+    }
+    
+    @include breakpoint($medium) {
+        .personal-box-image{
+            justify-content: left;
+            min-width: 200px;
+            max-width: 25%;
+            order: 2;
+        }
+        
+        .personal-box-text{
+            justify-content: left;
+            padding-left: 2em;
+            max-width: 75%;
+            order: 1;
+        }
+    }
 }
 
 $scroll_offset : 2em;
@@ -128,3 +169,4 @@ h1:before, .anchor:before {
     margin-bottom: 1em;
     background-color: $facebook-color;
 }
+
