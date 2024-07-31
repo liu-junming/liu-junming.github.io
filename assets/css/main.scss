@@ -110,9 +110,10 @@
         display: flex;
         width: 100%;
         order: 2;
-        // overflow-x: scroll;
+        overflow-x: scroll;
         img {
             max-width: 400px;
+            // max-width: none;
             // box-shadow: 1px 1px 2px #888;
             border: 2px mix(#fff, $badge-color, 50%) solid;
             object-fit: cover;
