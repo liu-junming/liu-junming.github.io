@@ -99,7 +99,8 @@
 .personal-box {
     display: flex;
     justify-content: left;
-    align-items: center;
+    // align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
     border-bottom: 1px #efefef solid;
@@ -111,12 +112,15 @@
         width: 100%;
         order: 2;
         overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 0;
         img {
-            max-width: 400px;
+            max-width: 200px;
             // max-width: none;
             // box-shadow: 1px 1px 2px #888;
             border: 2px mix(#fff, $badge-color, 50%) solid;
             object-fit: cover;
+            scroll-snap-align: start;
         }
     }
     
@@ -129,14 +133,15 @@
         .personal-box-image{
             justify-content: left;
             min-width: 200px;
-            max-width: 25%;
+            max-width: 30%;
+            padding-left: 3%;
             order: 2;
         }
         
         .personal-box-text{
             justify-content: left;
-            padding-left: 2em;
-            max-width: 75%;
+            // padding-left: 2em;
+            max-width: 70%;
             order: 1;
         }
     }
