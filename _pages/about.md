@@ -21,8 +21,8 @@ redirect_from:
 <span class='anchor' id='-educations'></span>
 {% include_relative includes/educations.md %}
 
-<!-- <span class='anchor' id='-news'></span>
-{% include_relative includes/news.md %} -->
+<span class='anchor' id='-news'></span>
+{% include_relative includes/news.md %}
 
 <span class='anchor' id='-publications'></span>
 {% include_relative includes/publications.md %}
@@ -32,6 +32,9 @@ redirect_from:
 
 <span class='anchor' id='-honors-and-awards'></span>
 {% include_relative includes/honors.md %}
+
+<!-- <span class='anchor' id='-talks'></span>
+{% include_relative includes/talks.md %} -->
 
 <span class='anchor' id='-personal'></span>
 {% include_relative includes/personal.md %}

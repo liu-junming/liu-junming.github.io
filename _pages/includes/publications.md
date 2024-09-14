@@ -4,7 +4,7 @@
 <div class='paper-box'>
 <div class='paper-box-text' markdown="1">
 <div class='title'>Exploring ChatGPT's Capabilities on Vulnerability Management</div> 
-``USENIX Security 2024`` [\[paper\]](https://arxiv.org/pdf/2311.06530) [\[code\]](https://github.com/Jamrot/ChatGPT-Vulnerability-Management)
+``USENIX Security 2024`` [\[paper\]]({{ site.baseurl }}/paper/ChatGPT-VM/Paper-Exploring_ChatGPT's_Capabilities_on_Vulnerability_Management.pdf) [\[code\]](https://github.com/Jamrot/ChatGPT-Vulnerability-Management) [\[slides\]]({{ site.baseurl }}/paper/ChatGPT-VM/Slides-Exploring_ChatGPT's_Capabilities_on_Vulnerability_Management.pdf)
 
 <div class='abstract'>Evaluation of ChatGPT for six vulnerability management tasks, investigating the impact of prompt engineering methods and identifying bottlenecks in ChatGPT's performance.</div>
 
