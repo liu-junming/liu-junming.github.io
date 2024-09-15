@@ -7,11 +7,13 @@ More fun facts about me:
 
 🏅 **Sports:** I placed second in the long jump at my undergraduate university in 2018.
 
-🐱 **Pet:** My pet is called Hu Niu (Tiger Girl). She is a one-year-old Munchkin cat.
+🐱 **Pet:** I am the parent of two cats, 虎妞 (Tiger Girl) and 墨菲 (Murphy).
 </div>
 
 <div class='personal-box-image'>
-    <img src='{{ site.baseurl }}/images/pics/dancing.png' alt="sym" width="100%">
-    <img src='{{ site.baseurl }}/images/pics/tiger.jpg' alt="sym" width="100%">
+    <img src='{{ site.baseurl }}/images/pics/dancing.png' alt="sym" width="50%" >
+    <img src='{{ site.baseurl }}/images/pics/tiger.jpg' alt="sym" width="50%">
+    <img src='{{ site.baseurl }}/images/pics/murphy.jpg' alt="sym" width="100%">
 </div>
+
 </div>
