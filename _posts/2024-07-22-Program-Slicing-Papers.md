@@ -38,6 +38,9 @@ summary: "awesome program slicing papers"
 - Revealing the Unseen: AI Chain on LLMs for Predicting Implicit Data Flows to Generate Data Flow Graphs in Dynamically-Typed Code. ``TOSEM 2024`` [[paper]](https://dl.acm.org/doi/10.1145/3672458) [[code]](https://drive.google.com/file/d/1a1pwDEPK1yod6E9recAuIkntCL0oUXOV/view?usp=drive_link)
 *use LLM directly slice python program to aid implicit data flow prediction.*
 
+- Program Slicing in the Era of Large Language Models. ``arXiv 2024`` [[paper]](http://arxiv.org/abs/2409.12369)
+*following the work of DL-based Slicing (i.e., A Learning-Based Approach to Static Program Slicing), compare LLMs' slicing capability on Java with static and dynamic slicing tools, and find the main challenge is complex control flow.*
+
 ## Program Reduction
 - LPR: Large Language Models-Aided Program Reduction. ``ISSTA 2024`` [[paper]](https://arxiv.org/pdf/2312.13064)
 *evaluation: reduction size, time consumed, ablation.*
@@ -55,6 +58,9 @@ summary: "awesome program slicing papers"
 *backward slicing on PDG until pre-defined depth, criterion decided by vulnerability types.*
 
 ### Recurring Bug
+
+- TRACER: Signature-based Static Analysis for Detecting Recurring Vulnerabilities. ``CCS 2022`` [[paper]](https://doi.org/10.1145/3548606.3560664)
+*capture signature by inter-procedural taint analysis.*
 
 - 🌟 MVP: Detecting Vulnerabilities using Patch-Enhanced Vulnerability Signatures. ``USENIX Security 2020`` [[paper]](https://www.usenix.org/conference/usenixsecurity20/presentation/xiao)
 *function-level backward+customized forward slicing on PDG based on changed statements, forward slicing graph decided by the changed statement.*

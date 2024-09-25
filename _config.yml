@@ -9,7 +9,7 @@ url: "http://127.0.0.1:4000" # local url
 baseurl: ""
 
 # Site Settings
-title                    : "Junming Liu"
+title                    : "Junming Liu (刘君茗)"
 description              : "Third Year Master's Student in Zhejiang University"
 repository               : "Jamrot/junmingliu.github.io"
 google_scholar_stats_use_cdn : true
