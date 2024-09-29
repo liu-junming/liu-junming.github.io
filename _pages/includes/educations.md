@@ -1,7 +1,7 @@
 # Educations
 
-### Zhejiang University (2022.09 - present)
+### Zhejiang University (Sep. 2022 - Present)
 Master of Engineering in Electronic and Information Engineering
 
-### University of Science and Technology Beijing (2018.09 - 2022.06)
+### University of Science and Technology Beijing (Sep. 2018 - Jun. 2022)
 Bachelor of Engineering in Automation

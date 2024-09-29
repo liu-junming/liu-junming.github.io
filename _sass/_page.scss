@@ -37,6 +37,24 @@
   }
 }
 
+.page-about {
+  @include breakpoint($large) {
+    @include span(12 of 12 last);
+    @include prefix(2 of 12);
+    @include suffix(2 of 12);
+  }
+
+  .page__inner-wrap {
+    @include full();
+
+    .page__content,
+    .page__meta,
+    .page__share {
+      @include full();
+    }
+  }
+}
+
 .page__title {
   margin-top: 0;
   line-height: 1;
@@ -52,68 +70,73 @@
 }
 
 .page__content {
-  // .about-me{
-  //   height: 100vh;
+  .about-me{
+    @include breakpoint($large) {
+      @include span(12 of 12 last);
+      @include prefix(2 of 12);
+      @include suffix(2 of 12);
+    }
+    height: 100vh;
 
-  //   img {
-  //     margin-top: 2em;
-  //     width: 200px;
-  //     height: 200px;
-  //     border-radius: 50%; 
-  //     object-fit: cover;
-  //     // center
-  //     display: block;
-  //     margin-left: auto;
-  //     margin-right: auto;
+    img {
+      margin-top: 2em;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%; 
+      object-fit: cover;
+      // center
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
 
-  //   }
+    }
 
-  //   h1 {
-  //     margin-top: 1em;
-  //     border-bottom: none;
-  //     text-align: center;
-  //     font-size: $type-size-1;
-  //     margin-bottom: 0;
-  //   }
+    h1 {
+      margin-top: 1em;
+      border-bottom: none;
+      text-align: center;
+      font-size: $type-size-1;
+      margin-bottom: 0;
+    }
 
-  //   h2 {
-  //     margin-top: 0;
-  //     margin-bottom: 1em;
-  //     text-align: center;
-  //     font-size: $type-size-2;
-  //   }
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0.8em;
+      text-align: center;
+      font-size: $type-size-2;
+    }
 
-  //   h3 {
-  //     font-size: $type-size-3;
-  //     font-family: $helvetica;
-  //     font-weight: bold;
-  //     text-align: center;
-  //   }
+    h3 {
+      font-size: $type-size-3;
+      font-family: $helvetica;
+      font-weight: bold;
+      text-align: center;
+    }
 
-  //   p {
-  //     text-align: center;
-  //     font-size: $type-size-4;
-  //     font-family: $helvetica;
-  //     font-weight: bold;
-  //   }
+    p {
+      text-align: center;
+      font-size: $type-size-4;
+      font-family: $helvetica;
+      font-weight: bold;
+    }
 
-  //   a {
-  //     text-decoration: none;
-  //     color: $text-color;
-  //   }
-  // }
-  #about-me{
-    border-bottom: none;
-    // margin-top: -10em;
-      &:before { 
-        content: ''; 
-        display: block; 
-        position: relative; 
-        width: 0; 
-        height: 10em; 
-        margin-top: -10em;
+    a {
+      text-decoration: none;
+      color: $text-color;
     }
   }
+  // #about-me{
+  //   border-bottom: none;
+  //   // margin-top: -10em;
+  //     &:before { 
+  //       content: ''; 
+  //       display: block; 
+  //       position: relative; 
+  //       width: 0; 
+  //       height: 10em; 
+  //       margin-top: -10em;
+  //   }
+  // }
   h1 {
     margin-top: 1.5em;
     margin-left: -0.5em;

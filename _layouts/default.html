@@ -13,6 +13,27 @@ layout: compress
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}
+    <div id="main" role="main">    
+      <article class="page-about" itemscope itemtype="http://schema.org/CreativeWork">
+        {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+        <div class="page__inner-wrap">
+          <section class="page__content" itemprop="text">
+          <span class='anchor' id='about-me'></span>
+          <div class="about-me">
+            <img src="{{ site.baseurl }}/images/pics/my.jpg">
+            <h1>Junming Liu</h1>
+            <h2>刘君茗</h2>
+            
+
+            <p>Master's student with research interests in <br><strong>Large Language Models for Software Security</strong>, <br><strong>Software Engineering</strong>, and <br><strong>Program Analysis</strong>.</p>
+
+            <h3><span style="color: red;">Actively seeking PhD opportunities!</span></h3>
+            <p>Email: jmliu|@|zju|.|edu|.|cn</p>
+          </div>
+          </section>
+        </div>
+      </article>
+    </div>
 
     <div id="main" role="main">
       {% include sidebar.html %}
