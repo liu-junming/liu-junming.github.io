@@ -51,6 +51,11 @@
     flex-wrap: wrap;
     border-bottom: 1px #efefef solid;
     padding: 0em 0 1em 0;
+
+    .title{
+        font-size: $type-size-3;
+        font-weight: bold;
+    }
     
     .paper-box-image{
         justify-content: center;
@@ -68,10 +73,7 @@
     .paper-box-text{
         max-width: 100%;
         order: 1;
-        .title{
-            font-size: $type-size-3;
-            font-weight: bold;
-        }
+        
         .abstract{
             font-size: 0.85em;
             font-style: italic;
