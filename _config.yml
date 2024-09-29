@@ -129,7 +129,7 @@ defaults:
       type: pages
     values:
       layout: default
-      author_profile: true
+      author_profile: false
 
 
 # Sass/SCSS
@@ -150,6 +150,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-tagging
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
@@ -165,3 +166,12 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+
+tag_page_layout: tag_page
+tag_page_dir: tag

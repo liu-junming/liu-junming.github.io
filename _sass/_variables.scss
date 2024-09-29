@@ -13,11 +13,11 @@ $paragraph-indent           : false; // true, false (default)
 $indent-var                 : 0.5em;
 
 /* system typefaces */
-$serif                      : Georgia, Times, serif;
-$sans-serif                 : "Trebuchet MS", Helvetica, sans-serif;
+$serif                      : Times, serif;
+// $sans-serif                 : "Trebuchet MS", Helvetica, sans-serif;
 // $sans-serif                 : Georgia, serif, sans-serif;
 
-// $sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$sans-serif                 : Helvetica, "Helvetica Neue", Arial, sans-serif;
 $monospace                  : Monaco, Consolas, "Lucida Console", monospace;
 
 /* sans serif typefaces */
@@ -32,7 +32,7 @@ $calisto                    : "Calisto MT", serif;
 $garamond                   : Garamond, serif;
 
 $global-font-family         : $sans-serif;
-$header-font-family         : $sans-serif;
+$header-font-family         : $helvetica;
 $caption-font-family        : $serif;
 
 /* type scale */
@@ -41,7 +41,8 @@ $type-size-2                : 1.953em;  // ~31.248px
 $type-size-3                : 1.4em;  // ~25.008px
 $type-size-4                : 1.2em;   // ~20px
 $type-size-5                : 1em;      // ~16px
-$type-size-6                : 0.75em;   // ~12px
+$type-size-6                : 0.8em;   // ~12px
+// $type-size-6                : 0.75em;   // ~12px
 $type-size-7                : 0.6875em; // ~11px
 $type-size-8                : 0.625em;  // ~10px
 

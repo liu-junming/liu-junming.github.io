@@ -2,7 +2,7 @@
 permalink: /
 title: ""
 excerpt: ""
-author_profile: true
+author_profile: false
 redirect_from: 
   - /about/
   - /about.html
@@ -15,8 +15,10 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
+<div class='about-me'>
 <span class='anchor' id='about-me'></span>
 {% include_relative includes/introduction.md %}
+</div>
 
 <span class='anchor' id='-news'></span>
 {% include_relative includes/news.md %}
