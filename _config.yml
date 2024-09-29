@@ -171,7 +171,8 @@ compress_html:
 collections:
   posts:
     output: true
-    permalink: /:categories/:year/:month/:day/:title/
+    # permalink: /:categories/:year/:month/:day/:title/
+    permalink: /:title/
 
 tag_page_layout: tag_page
 tag_page_dir: tag
