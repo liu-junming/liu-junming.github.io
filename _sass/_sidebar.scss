@@ -15,8 +15,8 @@
 
   @include breakpoint($large) {
     @include span(3 of 12);
-    @include prefix(0.5 of 12);
-    @include suffix(0.5 of 12);
+    @include prefix(0 of 12);
+    @include suffix(0 of 12);
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
