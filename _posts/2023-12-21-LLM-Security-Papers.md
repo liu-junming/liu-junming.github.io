@@ -1,13 +1,11 @@
 ---
 layout: post
-title: "Program Slicing Papers"
+title: "LLM Security"
 date: 2023-12-21
 author: Junming Liu
-tags: [LLMsecurity, paper]
+tags: [llmsecurity, paper]
 summary: "awesome LLM security papers"
 ---
-
-# LLM Security
 
 * I read several papers from this [GitHub repository](https://github.com/chawins/llm-sp), which was recommended by Chawin Sitawarin.
 
