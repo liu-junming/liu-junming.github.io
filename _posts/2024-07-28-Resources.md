@@ -3,7 +3,7 @@ layout: post
 title: "Resources"
 date: 2024-07-28
 author: Junming Liu
-tags: []
+tags: [resource]
 summary: "Resources of all kinds of topics"
 ---
 

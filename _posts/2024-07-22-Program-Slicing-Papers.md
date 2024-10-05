@@ -8,6 +8,7 @@ summary: "awesome program slicing papers"
 ---
 
 - [Slicing Technique](#slicing-technique)
+  - [Survey](#survey)
   - [DL-based Slicing](#dl-based-slicing)
   - [LLM Slicing](#llm-slicing)
   - [Program Reduction](#program-reduction)
@@ -19,9 +20,10 @@ summary: "awesome program slicing papers"
   - [Security Patch Identification](#security-patch-identification)
   - [Verification](#verification)
   - [Type Inference](#type-inference)
-  - [Regression Analysis](#regression-analysis)
   - [Data Augmentation](#data-augmentation)
-- [Criterion](#criterion)
+  - [Regression Analysis](#regression-analysis)
+- [Criterion (Points of Interest, PoI)](#criterion-points-of-interest-poi)
+  - [Vulnerability Type](#vulnerability-type)
 
 
 # Slicing Technique

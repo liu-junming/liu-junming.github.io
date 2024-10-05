@@ -1,11 +1,33 @@
 ---
 layout: post
-title: "LLM Security"
+title: "LLM Security Papers"
 date: 2023-12-21
 author: Junming Liu
 tags: [llmsecurity, paper]
 summary: "awesome LLM security papers"
 ---
+
+- [LLM Agents](#llm-agents)
+- [LLM](#llm)
+- [Other Resources](#other-resources)
+  - [Open-Source LLMs](#open-source-llms)
+  - [Blog](#blog)
+- [Vulnerabilities in LLM-integrated App](#vulnerabilities-in-llm-integrated-app)
+  - [Vulnerability](#vulnerability)
+    - [Fix patterns](#fix-patterns)
+    - [Prompt Injection](#prompt-injection-1)
+    - [Indirect Prompt Injection](#indirect-prompt-injection)
+    - [Insecure output handling](#insecure-output-handling)
+    - [Frameworks](#frameworks)
+  - [LLM-integrated App](#llm-integrated-app)
+    - [LLM-integrated App Category](#llm-integrated-app-category)
+    - [LLM-integrated App Market](#llm-integrated-app-market)
+    - [News](#news)
+  - [LLM-integrated framework](#llm-integrated-framework)
+    - [LangChain](#langchain)
+- [Interesting Opinion](#interesting-opinion)
+    - [如何让LLM下载网页上的恶意内容](#如何让llm下载网页上的恶意内容)
+
 
 * I read several papers from this [GitHub repository](https://github.com/chawins/llm-sp), which was recommended by Chawin Sitawarin.
 
@@ -17,6 +39,7 @@ summary: "awesome LLM security papers"
 | ⚔️ | attack |
 | 🛡️ | defense |
 | 🔭 | survey |
+
 
 ## Evaluation / Survey / Benchmark
 
