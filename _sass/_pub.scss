@@ -135,13 +135,15 @@
     }
     
     .badge {
-        padding: 0.15rem 0.5rem;
+        padding: 0.2rem 0.5rem;
         display: inline;
-        color: white;
-        background-color: $badge-color;
+        // color: white;
+        color: $text-color;
+        background-color: $label-color;
         font-size: 0.85em;
         font-weight: 300;
         border: 0px solid $border-color;
+        border-radius: 4px;
     }
     
     .patent-name {
@@ -149,4 +151,16 @@
         display: inline;
         color:$darker-gray;
     }
+}
+
+.badge {
+    padding: 0.2rem 0.5rem;
+    display: inline;
+    // color: white;
+    color: $text-color;
+    background-color: $label-color;
+    font-size: 0.85em;
+    font-weight: 300;
+    border: 0px solid $border-color;
+    border-radius: 3px;
 }

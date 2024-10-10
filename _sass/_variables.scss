@@ -54,6 +54,7 @@ $type-size-8                : 0.625em;  // ~10px
 
 // my color
 $badge-color                : #6CA6CD;
+$label-color                : mix(#6CA6CD, white, 15%);;
 $theme-background-color     : mix(#6CA6CD, #2F3E56, 90%);
 $header-color               : $theme-background-color;
 // $about-text-color           : #eff9ff;
