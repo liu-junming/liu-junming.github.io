@@ -1,23 +1,26 @@
 /* ==========================================================================
    MASTHEAD
    ========================================================================== */
+  
 
 .masthead {
   position: sticky;
   top: 0;
-  background-color: white;
-  border-bottom: 1px solid $border-color;
+  background-color: $header-color;
+  border-bottom: 1px groove mix(#6CA6CD, #2F3E56, 80%);;
   -webkit-animation: intro 0.3s both;
           animation: intro 0.3s both;
   -webkit-animation-delay: 0.15s;
           animation-delay: 0.15s;
   z-index: 20;
+  color: white;
 
   &__inner-wrap {
     @include container;
     @include clearfix;
     padding: .5em;
     font-family: $sans-serif-narrow;
+    background-color: $header-color;
 
     @include breakpoint($x-large) {
       max-width: $x-large;

@@ -128,7 +128,7 @@ defaults:
       path: ""
       type: pages
     values:
-      layout: default
+      layout: default_new
       author_profile: false
 
 

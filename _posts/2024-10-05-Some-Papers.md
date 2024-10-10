@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Some Papers"
-date: 2024-07-22
+date: 2024-10-05
 author: Junming Liu
 tags: [paper]
 summary: "awesome papers"

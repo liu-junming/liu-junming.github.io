@@ -1,0 +1,90 @@
+.tags {
+    @include breakpoint($large) {
+        @include span(12 of 12 last);
+        @include prefix(0.5 of 12);
+        @include suffix(0 of 12);
+    }
+    
+    .tags-header {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      // border-bottom: 1px solid $border-color;
+      padding-bottom: 1em;
+      
+      h1 {
+      margin-bottom: 0.5em;
+      font-size: $type-size-1;
+      color: $text-color;
+      
+      }
+  
+      p {
+          font-size: $type-size-6;
+          color: $text-color;
+      }
+    }
+
+    .tags__inner-wrap {
+        margin-bottom: 2em;
+
+        @include full();
+
+        .tags__content,
+        .page__meta,
+        .page__share {
+            @include full();
+        }
+    }
+}
+
+.tags__content {
+  h1 {
+    // padding-bottom: 0.5em;
+    font-size: $type-size-1;
+  }
+
+  h2 {
+    font-size: $type-size-2;
+    padding-bottom: 0.5em;
+  }
+
+  li, ul {
+    font-size: $type-size-4;
+    font-weight: bold;
+    line-height: 1.2;
+    color: $text-color;
+    text-decoration: none;
+    transition: $global-transition;
+  }
+
+  a {
+    // font-size: $type-size-4;
+    font-weight: bold;
+    line-height: 1.2;
+    // padding-right: 0.5em;
+    color: $text-color;
+    text-decoration: none;
+    transition: $global-transition;
+    &:hover {
+    text-decoration: underline;
+    }
+  }
+
+  .tag__label {
+    padding-right: 0.5em;
+    display: inline-block;
+    line-height: 1.2;
+  }
+
+  .post__tags{
+    font-size: $type-size-5;
+    padding-right: 0;
+
+    li, ul, a {
+      // font-size: $type-size-5;
+      padding-right: 0;
+    }
+  }
+  
+}
+

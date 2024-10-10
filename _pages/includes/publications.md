@@ -1,35 +1,66 @@
-# Publications 
+<h1>Publications</h1>
 
-## Conference Paper
+<h2>Conference Paper <div class='pub-note'>(*equal contribution)</div></h2>
+
 <div class='paper-box'>
-<div class='title'>Exploring ChatGPT's Capabilities on Vulnerability Management</div> 
-<div class='paper-box-text' markdown="1">
-``USENIX Security 2024`` [\[paper\]]({{ site.baseurl }}/paper/ChatGPT-VM/Paper-Exploring_ChatGPT's_Capabilities_on_Vulnerability_Management.pdf) [\[code\]](https://github.com/Jamrot/ChatGPT-Vulnerability-Management) [\[slides\]]({{ site.baseurl }}/paper/ChatGPT-VM/Slides-Exploring_ChatGPT's_Capabilities_on_Vulnerability_Management.pdf)
+<div class='paper-box-text'>
+<div class='title'>Exploring ChatGPT's Capabilities on Vulnerability Management</div>
 
-<div class='abstract'>Evaluation of ChatGPT for six vulnerability management tasks, investigating the impact of prompt engineering methods and identifying bottlenecks in ChatGPT's performance.</div>
+<div class='author'>
+Peiyu Liu*, <div class='my-name'>Junming Liu*</div>, Lirong Fu, Kangjie Lu, Yifan Xia, Xuhong Zhang, Wenzhi Chen, Haiqin Weng, Shouling Ji, Wenhai Wang. 
+</div>
 
-Peiyu Liu\*, *<u>Junming Liu</u>*\*, Lirong Fu, Kangjie Lu, Yifan Xia, Xuhong Zhang, Wenzhi Chen, Haiqin Weng, Shouling Ji, Wenhai Wang. (\*equal contribution)
+<div class='journal'>USENIX Security 2024</div>
 
-In Proceedings of the 33rd USENIX Security Symposium (USENIX Security 2024)
+<div class='abstract'>Evaluation of ChatGPT’s capabilities across the entire vulnerability management lifecycle in six tasks, investigating prompt engineering impacts and identifying performance bottlenecks.</div>
+
+<div class="button-group">
+    <a class="button" href="{{ site.baseurl }}/paper/ChatGPT-VM/Paper-Exploring_ChatGPT's_Capabilities_on_Vulnerability_Management.pdf" target="_blank">Paper</a>
+    <a class="button" href="https://github.com/Jamrot/ChatGPT-Vulnerability-Management" target="_blank">Code</a>
+    <a class="button" href="{{ site.baseurl }}/paper/ChatGPT-VM/Slides-Exploring_ChatGPT's_Capabilities_on_Vulnerability_Management.pdf">Slides</a>
+</div>
+
 </div>
 
 <div class='paper-box-image'>
-    <!-- <div> -->
-    <!-- <div class="badge">USENIX Security</div> -->
     <img src='{{ site.baseurl }}/paper/ChatGPT-VM/ChatGPT.png' alt="sym" width="100%">
-    <!-- </div> -->
 </div>
 
 </div>
 
 ## Patents and Software Copyrights
-``Patent`` Kernel Data Race Detection Based on Patch and Concurrent Behavior Pattern Analysis. Wenhai Wang, *<u>Junming Liu</u>*, Peiyu Liu, Lirong Fu. China, 2024. (published)
 
-``Patent`` Vulnerability Type Adaptation Program Slicing Method and Device, Electronic equipment.
-Wenhai Wang, *<u>Junming Liu</u>*, Bin Xu, Peiyu Liu, et al. China, 2024. (submitted)
+<div class='patent-item'>
+<div class='badge'>Patent</div>
+<div class='patent-name'>Kernel Data Race Detection Based on Patch and Concurrent Behavior Pattern Analysis. </div>
+<div class='author'>
+Wenhai Wang, <div class='my-name'>Junming Liu*</div>, Peiyu Liu, Lirong Fu. China, 2024.</div> 
+</div>
 
-``Patent`` Method and Device for Automatic Generation of Annotations for Binary Code Text. Wenhai Wang, Tong Ye, Xuhong Zhang, Peiyu Liu, Bin Xu, *<u>Junming Liu</u>*. China, 2023.
+<div class='patent-item'>
+<div class='badge'>Patent</div>
+<div class='patent-name'>Vulnerability Type Adaptation Program Slicing Method and Device, Electronic equipment. </div>
+<div class='author'>
+Wenhai Wang, <div class='my-name'>Junming Liu*</div>, Bin Xu, Peiyu Liu, et al. China, 2024.</div>
+</div>
 
-``Software Copyright`` Data-Driven Industrial Process Performance Monitoring and Fault Detection System. *<u>Junming Liu</u>*, et al. China, 2021.
+<div class='patent-item'>
+<div class='badge'>Patent</div>
+<div class='patent-name'>Method and Device for Automatic Generation of Annotations for Binary Code Text. </div>
+<div class='author'>
+Wenhai Wang, Tong Ye, Xuhong Zhang, Peiyu Liu, Bin Xu, <div class='my-name'>Junming Liu*</div>. China, 2023.</div>
+</div>
 
-``Software Copyright`` Tears of the Times Photo Editing Software. *<u>Junming Liu</u>*, et al. China, 2021.
+<div class='patent-item'>
+<div class='badge'>Software Copyright</div>
+<div class='patent-name'>Data-Driven Industrial Process Performance Monitoring and Fault Detection System. </div>
+<div class='author'>
+<div class='my-name'>Junming Liu*</div>, et al. China, 2021.</div>
+</div>
+
+<div class='patent-item'>
+<div class='badge'>Software Copyright</div>
+<div class='patent-name'>Tears of the Times Photo Editing Software. </div>
+<div class='author'>
+<div class='my-name'>Junming Liu*</div>, et al. China, 2021.</div>
+</div>

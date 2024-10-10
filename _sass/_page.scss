@@ -10,7 +10,6 @@
   padding-right: 1em;
   animation: intro 0.3s both;
   animation-delay: 0.35s;  
-
   @include breakpoint($x-large) {
     max-width: $x-large;
   }
@@ -18,9 +17,9 @@
 
 .page {
   @include breakpoint($large) {
-    @include span(9 of 12 last);
-    @include prefix(0.5 of 12);
-    @include suffix(1.5 of 12);
+    @include span(12 of 12 last);
+    @include prefix(2 of 12);
+    @include suffix(2 of 12);
   }
 
   .page__inner-wrap {
@@ -31,6 +30,17 @@
     .page__share {
       @include full();
     }
+  }
+}
+
+.page-about_background {
+  @include container;
+  @include clearfix;
+  background-color: $theme-background-color ;
+  animation: intro 0.3s both;
+  animation-delay: 0.35s;  
+  @include breakpoint($x-large) {
+    max-width: none;
   }
 }
 
@@ -63,6 +73,7 @@
 
 .page__lead {
   font-family: $global-font-family;
+  font-weight: $global-font-weight;
   font-size: $type-size-4;
 }
 
@@ -74,6 +85,12 @@
       @include suffix(2 of 12);
     }
     height: 100vh;
+    color: $about-text-color;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    text-align: center;
 
     .links{
       display: flex;
@@ -85,7 +102,7 @@
         margin: 0 0.3em;
         // font-size: $type-size-1;
         text-decoration: none;
-        color: $text-color;
+        color: $about-text-color;
 
         &:hover {
           color: $gray;
@@ -124,7 +141,7 @@
       margin-top: -0.5em;
       text-align: center;
       font-size: $type-size-3;
-      color: $gray;
+      // color: $gray;
     }
 
     h3 {
@@ -138,31 +155,20 @@
       text-align: center;
       font-size: 1.1em;
       font-family: $helvetica;
-      font-weight: bold;
+      font-weight: 400;
     }
 
-    // a {
-    //   text-decoration: none;
-    //   color: $text-color;
-    // }
+    .highlight {
+      font-weight: 600;
+      color: white;
+      display: inline;
+      text-align: center;
+    }
   }
-
-  // #about-me{
-  //   border-bottom: none;
-  //   // margin-top: -10em;
-  //     &:before { 
-  //       content: ''; 
-  //       display: block; 
-  //       position: relative; 
-  //       width: 0; 
-  //       height: 10em; 
-  //       margin-top: -10em;
-  //   }
-  // }
 
   h1 {
     margin-top: 1.5em;
-    margin-left: -0.5em;
+    // margin-left: -0.5em;
     margin-right: -0.5em;
     padding-bottom: 0.5em;
     font-size: $type-size-3;
@@ -192,10 +198,15 @@
   }
 
   a {
-    text-decoration: underline;
+    // text-decoration: underline;
+    text-decoration: none;
+    color: $theme-link-color;
+    font-weight: 600;
 
     &:hover {
-      text-decoration: underline;
+      // text-decoration: underline;
+      color: $theme-link-color-hover;
+      font-weight: 600;
 
       img {
         box-shadow: 0 0 10px rgba(#000, 0.25);

@@ -3,17 +3,20 @@ main:
   # - title: "Home"
   #   url: "/"
 
-  - title: "About Me"
+  - title: "About"
     url: "/#-about-me"
 
   # - title: "News"
   #   url: "/#-news"
 
-  - title: "Educations"
-    url: "/#-educations"
+  # - title: "Educations"
+  #   url: "/#-educations"
 
   - title: "Publications"
     url: "/#-publications"
+
+  - title: "Personal"
+    url: "/#-personal"
 
   # - title: "Patents and Copyrights"
   #   url: "#-patents-and-copyrights"

@@ -1,0 +1,152 @@
+.page-pub {
+@include breakpoint($large) {
+    @include span(12 of 12 last);
+    @include prefix(1.5 of 12);
+    @include suffix(1.5 of 12);
+}
+
+.page__inner-wrap {
+    @include full();
+
+    .page__content,
+    .page__meta,
+    .page__share {
+    @include full();
+    }
+}
+}
+  
+.pub-note{
+    font-size: 1em;
+    display: inline;
+    font-weight: 400;
+}
+
+.paper-box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px #efefef solid;
+    padding-bottom: 1em;
+    
+    .paper-box-image{
+        display: none;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        order: 1;
+        img {
+            max-width: 400px;
+            // box-shadow: 1px 1px 2px #888;
+            // border: 2px mix(#fff, $badge-color, 50%) solid;
+            object-fit: cover;
+        }
+    }
+    
+    .paper-box-text{
+        max-width: 100%;
+        order: 2;
+        margin-bottom: 0.5em;
+        
+        .title{
+            font-size: $type-size-4;
+            font-weight: bold;
+            margin-bottom: 0.2em;
+            color: $darker-gray;
+        }
+
+        .abstract{
+            color: $gray;
+            padding: 0em 0 0.85em 0;
+        }
+
+        .journal{
+            color: black;
+            font-weight: 500;
+        }
+
+        .author{
+            color: $dark-gray;
+            .my-name{
+                display: inline;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: row;
+        column-gap: 0.5em;
+        // margin-top: -0.5em;
+
+        .button {
+            padding: 0.2em 0.5em;
+            background-color: mix($badge-color, white, 10%);
+            color: $badge-color;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: $type-size-5;
+            font-weight: 400;
+            transition: background-color 0.3s ease;
+            &:hover {
+                background-color:mix($badge-color, white, 30%);
+            }
+        }
+    }
+    
+    @include breakpoint($medium) {
+        .paper-box-image{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            min-width: 200px;
+            max-width: 30%;
+            order: 1;
+        }
+        
+        .paper-box-text{
+            justify-content: left;
+            padding-left: 2em;
+            max-width: 70%;
+            order: 2;
+        }
+    }
+
+    @include breakpoint($medium){
+        .paper-box-image{
+            display: flex;
+        }
+    }
+}
+
+
+.patent-item{
+    margin-bottom: 0.5em;
+    .author{
+        display: inline;
+        color: $dark-gray;
+        .my-name{
+            display: inline;
+            font-weight: 600;
+        }
+    }
+    
+    .badge {
+        padding: 0.15rem 0.5rem;
+        display: inline;
+        color: white;
+        background-color: $badge-color;
+        font-size: 0.85em;
+        font-weight: 300;
+        border: 0px solid $border-color;
+    }
+    
+    .patent-name {
+        font-weight: 500;
+        display: inline;
+        color:$darker-gray;
+    }
+}
