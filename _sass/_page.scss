@@ -36,9 +36,10 @@
 .page-about_background {
   @include container;
   @include clearfix;
-  background-color: $theme-background-color ;
+  background-color: $about-background-color;
   animation: intro 0.3s both;
-  animation-delay: 0.35s;  
+  animation-delay: 0.35s;    
+  border-bottom: 1px solid $about-border-color;
   @include breakpoint($x-large) {
     max-width: none;
   }
@@ -84,36 +85,58 @@
       @include prefix(2 of 12);
       @include suffix(2 of 12);
     }
-    height: 100vh;
+    // height: 100vh;
     color: $about-text-color;
     // display: flex;
     // flex-direction: column;
     // justify-content: center;
     // align-items: center;
     text-align: center;
+    margin-bottom: 2em;
+
+    .name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1em;
+      .english {
+        display: inline-block;
+        border-bottom: none;
+        font-size: $type-size-2;
+        font-weight: 600;
+        margin-right: 0.5em;
+      }
+  
+      .chinese {
+        display: inline-block;
+        font-family: $global-font-family;
+        font-size: $type-size-3;
+        font-weight: 400;
+      }
+    }
 
     .links{
       display: flex;
       justify-content: center;
       margin-top: 0.5em;
       margin-bottom: 0.5em;
-      font-size: $type-size-2;
+      font-size: $type-size-3;
       a {
         margin: 0 0.3em;
         // font-size: $type-size-1;
         text-decoration: none;
-        color: $about-text-color;
+        color: $link-color;
 
         &:hover {
-          color: $gray;
+          color: $link-color-hover;
         }
       }
     }
 
     img {
       margin-top: 2em;
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%; 
       object-fit: cover;
       // center
@@ -128,39 +151,24 @@
 
     }
 
-    h1 {
-      margin-top: 1em;
-      border-bottom: none;
-      text-align: center;
-      font-size: $type-size-1;
-      margin-bottom: 0;
-    }
-
-    h2 {
-      font-family: $serif;
-      margin-top: -0.5em;
-      text-align: center;
-      font-size: $type-size-3;
-      // color: $gray;
-    }
-
     h3 {
       font-size: $type-size-3;
-      font-family: $helvetica;
+      font-family: $global-font-family;
       font-weight: bold;
       text-align: center;
     }
 
     p {
       text-align: center;
-      font-size: 1.1em;
-      font-family: $helvetica;
+      font-size: 1.2em;
+      font-family: $global-font-family;
       font-weight: 400;
+      margin-bottom: 2em;
     }
 
     .highlight {
       font-weight: 600;
-      color: white;
+      color: $about-text-color;
       display: inline;
       text-align: center;
     }
@@ -172,7 +180,8 @@
     margin-right: -0.5em;
     padding-bottom: 0.5em;
     font-size: $type-size-3;
-    border-bottom: 1px solid $border-color;
+    color: $darker-gray;
+    // border-bottom: 1px solid $border-color;
   }
 
   h2 {
@@ -235,6 +244,11 @@
     margin-top: -1.5em;
     padding-left: 1.25rem;
   }
+
+  strong {
+    font-weight: 600;
+  }
+
 }
 
 .page__hero {

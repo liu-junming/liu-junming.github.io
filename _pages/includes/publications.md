@@ -34,33 +34,33 @@ Peiyu Liu*, <div class='my-name'>Junming Liu*</div>, Lirong Fu, Kangjie Lu, Yifa
 <div class='badge'>Patent</div>
 <div class='patent-name'>Kernel Data Race Detection Based on Patch and Concurrent Behavior Pattern Analysis. </div>
 <div class='author'>
-Wenhai Wang, <div class='my-name'>Junming Liu*</div>, Peiyu Liu, Lirong Fu. China, 2024.</div> 
+Wenhai Wang, <div class='my-name'>Junming Liu</div>, Peiyu Liu, Lirong Fu. China, 2024.</div> 
 </div>
 
 <div class='patent-item'>
 <div class='badge'>Patent</div>
 <div class='patent-name'>Vulnerability Type Adaptation Program Slicing Method and Device, Electronic equipment. </div>
 <div class='author'>
-Wenhai Wang, <div class='my-name'>Junming Liu*</div>, Bin Xu, Peiyu Liu, et al. China, 2024.</div>
+Wenhai Wang, <div class='my-name'>Junming Liu</div>, Bin Xu, Peiyu Liu, et al. China, 2024.</div>
 </div>
 
 <div class='patent-item'>
 <div class='badge'>Patent</div>
 <div class='patent-name'>Method and Device for Automatic Generation of Annotations for Binary Code Text. </div>
 <div class='author'>
-Wenhai Wang, Tong Ye, Xuhong Zhang, Peiyu Liu, Bin Xu, <div class='my-name'>Junming Liu*</div>. China, 2023.</div>
+Wenhai Wang, Tong Ye, Xuhong Zhang, Peiyu Liu, Bin Xu, <div class='my-name'>Junming Liu</div>. China, 2023.</div>
 </div>
 
 <div class='patent-item'>
 <div class='badge'>Software Copyright</div>
 <div class='patent-name'>Data-Driven Industrial Process Performance Monitoring and Fault Detection System. </div>
 <div class='author'>
-<div class='my-name'>Junming Liu*</div>, et al. China, 2021.</div>
+<div class='my-name'>Junming Liu</div>, et al. China, 2021.</div>
 </div>
 
 <div class='patent-item'>
 <div class='badge'>Software Copyright</div>
 <div class='patent-name'>Tears of the Times Photo Editing Software. </div>
 <div class='author'>
-<div class='my-name'>Junming Liu*</div>, et al. China, 2021.</div>
+<div class='my-name'>Junming Liu</div>, et al. China, 2021.</div>
 </div>

@@ -1,0 +1,23 @@
+{% if page.author and site.data.authors[page.author] %}
+  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
+{% endif %}
+<h1>About Me</h1>
+
+<p>Hi, my name is Junming Liu (刘君茗). I am currently a Master's student in <a href="https://www.zju.edu.cn">Zhejiang University</a>, under the supervision of <a href="https://person.zju.edu.cn/wangweihai">Prof. Wenhai Wang</a>. My research interests in <strong>Large Language Models for Software Security</strong>, <strong>Software Engineering</strong>, and <strong>Program Analysis</strong>. </p>
+<p><strong><span style="color: rgb(194, 106, 55);">I am actively seeking PhD opportunities for Fall 2025.</span></strong></p>
+
+<p>My research interests focuses on improving the effectiveness and quality of the entire vulnerability management lifecycle, with two key aspects: </p>
+<ul>
+  <li>Advancing vulnerability management technologies, including vulnerability detection, automated fixing, patch correctness assessment, and more. </li>
+  <li>Understanding the broader societal and community impacts of vulnerabilities. </li>
+</ul>
+<p>To achieve these goals, I am interested in exploring the use of machine learning, static analysis, and other techniques to enhance vulnerability management. I also seek to assess how these tools can improve both technical efficiency and the human-centered understanding of vulnerabilities.</p>
+
+
+<p>
+<strong>Email: </strong><a href="mailto:{{ author.email }}">jmliu|at|zju.edu.cn</a>
+</p>
+
+<p>
+<a href="{{ site.baseurl }}/images/resume/JunmingLiu_CV.pdf">Resume</a>
+</p>
