@@ -13,7 +13,7 @@ More fun facts about me:
 <div class='personal-box-image'>
     <img src='{{ site.baseurl }}/images/pics/dancing.png' alt="sym" width="33%" >
     <img src='{{ site.baseurl }}/images/pics/tiger.jpg' alt="sym" width="33%">
-    <img src='{{ site.baseurl }}/images/pics/murphy.jpg' alt="sym" width="66%">
+    <img src='{{ site.baseurl }}/images/pics/murphy.jpg' alt="sym" width="34%">
 </div>
 
 </div>
