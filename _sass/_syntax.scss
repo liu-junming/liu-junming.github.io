@@ -37,15 +37,16 @@ div.highlighter-rouge, figure.highlight {
   background-color: $inline-code-background;
   color: $inline-code-color;
   padding: 0.1rem 0.2rem;
-  // line-height: 1.5;
-  margin: 0.5em;
+  line-height: 1.8;
+  margin: 0.3em;
+  // margin-top: 0;
   // border: 0px solid $border-color;
   // border-radius: 0;
-  margin: 0;
   font-family: $monospace;
   font-weight: 400;
   font-size: $type-size-6;
   // border-radius: 3px;
+  // box-shadow: none;
 }
 
 .highlight table td { padding: 5px; }
