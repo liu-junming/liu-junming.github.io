@@ -40,9 +40,7 @@
   animation: intro 0.3s both;
   animation-delay: 0.35s;    
   border-bottom: 1px solid $about-border-color;
-  @include breakpoint($x-large) {
-    max-width: none;
-  }
+  max-width: none;
 }
 
 .page-about {
