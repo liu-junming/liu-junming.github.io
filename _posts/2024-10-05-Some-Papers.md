@@ -45,3 +45,5 @@ summary: "awesome papers"
     - Out-of-Distribution Generalization (distinguish vulnerability & patch)
       - Method: Vulnerability & Patch Dataset. Testing on VulnPatchPairs dataset containing both vulnerable and patched functions.
       - Conclusion 3: Current models struggle to distinguish between vulnerable and patched functions, indicating poor out-of-distribution generalization.
+
+- ****
