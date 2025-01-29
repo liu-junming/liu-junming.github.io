@@ -33,11 +33,14 @@ redirect_from:
 <!-- <span class='anchor' id='-honors-and-awards'></span>
 {% include_relative includes/honors.md %} -->
 
+<span class='anchor' id='-service'></span>
+{% include_relative includes/service.md %}
+
 <!-- <span class='anchor' id='-talks'></span>
 {% include_relative includes/talks.md %} -->
 
-<span class='anchor' id='-personal'></span>
-{% include_relative includes/personal.md %}
+<!-- <span class='anchor' id='-personal'></span>
+{% include_relative includes/personal.md %} -->
 
 <!-- 
 # 💬 Invited Talks

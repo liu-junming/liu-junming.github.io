@@ -12,11 +12,14 @@ main:
   # - title: "Educations"
   #   url: "/#-educations"
 
-  - title: "Publications"
+  - title: "Publication"
     url: "/#-publications"
 
-  - title: "Personal"
-    url: "/#-personal"
+  - title: "Service"
+    url: "/#-service"
+
+  # - title: "Personal"
+  #   url: "/#-personal"
 
   # - title: "Patents and Copyrights"
   #   url: "#-patents-and-copyrights"

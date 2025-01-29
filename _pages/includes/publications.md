@@ -28,7 +28,7 @@ Peiyu Liu*, <div class='my-name'>Junming Liu*</div>, Lirong Fu, Kangjie Lu, Yifa
 
 </div>
 
-## Patents and Software Copyrights
+<!-- ## Patents and Software Copyrights
 
 <div class='patent-item'>
 <div class='badge'>Patent</div>
@@ -63,4 +63,4 @@ Wenhai Wang, Tong Ye, Xuhong Zhang, Peiyu Liu, Bin Xu, <div class='my-name'>Junm
 <div class='patent-name'>Tears of the Times Photo Editing Software. </div>
 <div class='author'>
 <div class='my-name'>Junming Liu</div>, et al. China, 2021.</div>
-</div>
+</div> -->
