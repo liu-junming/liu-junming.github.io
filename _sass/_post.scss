@@ -70,6 +70,26 @@
               padding-bottom: 0.5em;
               font-size: $type-size-2;
             }
+
+            h2 {
+              padding-bottom: 0.3em;
+              font-size: $type-size-3;
+            }
+
+            h3 {
+              padding-bottom: 0.2em;
+              font-size: $type-size-4;
+            }
+
+            h4 {
+              padding-bottom: 0.1em;
+              font-size: $type-size-5;
+            }
+
+            h5 {
+              padding-bottom: 0.1em;
+              font-size: $type-size-6;
+            }
           
             p, li, dl {
               font-size: 1em;
@@ -78,6 +98,7 @@
             /* paragraph indents */
             p {
               margin: 0 0 $indent-var;
+              padding-left: 1em;
           
               /* sibling indentation*/
               @if $paragraph-indent == true {
