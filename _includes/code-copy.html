@@ -1,0 +1,37 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const highlightContainers = document.querySelectorAll('.highlight');
+      
+      highlightContainers.forEach(function(container) {
+        const preElement = container.querySelector("pre");
+        const codeElement = preElement ? preElement.querySelector("code") : null;
+
+        if (preElement && codeElement) {
+          const button = document.createElement("button");
+          button.innerHTML = '<i class="fas fa-copy"></i>';
+          button.classList.add("copy-btn");
+
+          container.insertBefore(button, preElement);
+
+          button.addEventListener("click", function() {
+            const textarea = document.createElement("textarea");
+            textarea.style.position = "absolute";
+            textarea.style.left = "-9999px";
+            textarea.textContent = codeElement.textContent;
+            document.body.appendChild(textarea);
+
+            textarea.select();
+            document.execCommand("copy");
+
+            document.body.removeChild(textarea);
+
+            button.innerHTML= '<i class="fas fa-check"></i>';
+            setTimeout(() => {
+              button.innerHTML = '<i class="fas fa-copy"></i>';
+            }, 3000);
+          });
+        }
+      });
+    });
+</script>
+  
