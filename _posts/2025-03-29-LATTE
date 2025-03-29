@@ -1,0 +1,26 @@
+---
+layout: post
+title: LATTE
+date: '2025-03-29'
+author: 'Junming Liu'
+tags:
+    - Read
+    - static_analysis
+    - LLM4SE
+    - slicing
+    - '2025'
+    - pub-TOSEM
+summary: 'LLM-Powered Static Binary Taint Analysis'
+url: 'https://dl.acm.org/doi/10.1145/3711816'
+$version: 34306
+$libraryID: 1
+$itemKey: WILJYQ3M
+
+---
+![\<img alt="" data-attachment-key="SUU844B3" width="1619" height="539" src="synced/SUU844B3.png" ztype="zimage"> | 700](/images/synced/SUU844B3.png)
+
+(1) use LLM to identify sinks + extract backward slicing -> call chains,
+
+(2) use LLM to identify sources + match call chains with sources -> candidate data flow,
+
+(3) use LLM to extract tainted data in candidate data flow recursively (add one function each time) and identify vulnerability.
