@@ -47,9 +47,9 @@ summary: "awesome program slicing papers"
 	*following the work of DL-based Slicing (i.e., A Learning-Based Approach to Static Program Slicing), compare LLMs' slicing capability on Java with static and dynamic slicing tools, and find the main challenge is complex control flow.*
 
 ### static analysis
-- LLM-Powered Static Binary Taint Analysis. ``TOSEM `` \[[paper](https://dl.acm.org/doi/10.1145/3711816)\]  \[[note](2025-03-29-LATTE)\]
+- LLM-Powered Static Binary Taint Analysis. ``TOSEM `` \[[paper](https://dl.acm.org/doi/10.1145/3711816)\]  \[[note](/_posts/2025-03-29-LATTE)\]
 	*extract call chain with LLM **idenfited sinks & sources**, use LLM to **extract tainted data** in call chains's function recursively (add one function each time), and use LLM to identify vulnerability.*
-- IRIS: LLM-Assisted Static Analysis for Detecting Security Vulnerabilities. `ICLR 2025` \[[note](2025-03-25-IRIS)\]
+- IRIS: LLM-Assisted Static Analysis for Detecting Security Vulnerabilities. `ICLR 2025` \[[note](/_posts/2025-03-25-IRIS)\]
 	*transfer LLM **extracted sources & sinks** to CodeQL query, and use LLM to **filter vulnerable paths** detected by CodeQL.*
 
 ### program reduction
