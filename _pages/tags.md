@@ -16,7 +16,7 @@ permalink: /tags/
   {% for tag in site.tags %}
     <div class="tag__label">
       <span class="tag-name">
-        <a href="{{ site.baseurl }}/tag/{{ tag[0] | slugify }}/">{{ tag[0] }}</a>
+        <a href="{{ site.baseurl }}/tag/{{ tag[0] }}/">{{ tag[0] }}</a>
       </span>
       <span class="tag-count">{{ tag[1].size }}</span>
     </div>

@@ -174,8 +174,8 @@
 .posts-table {
     @include breakpoint($large) {
         @include span(12 of 12 last);
-        @include prefix(0.5 of 12);
-        @include suffix(0 of 12);
+        @include prefix(1.5 of 12);
+        @include suffix(1.5 of 12);
     }
 
     h1{
@@ -199,13 +199,14 @@
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
+                line-height: 2;
     
                 .post-title {
                     margin: 0;
                     font-size: $type-size-3;
-                    line-height: 1.2;
+                    line-height: 1.5;
                     font-family: $header-font-family;
-                    font-weight: bold;
+                    font-weight: 600;
                     a {
                         color: $text-color;
                         text-decoration: none;
@@ -218,52 +219,57 @@
     
                 .post-meta {
                 font-size: $type-size-6;
-                color: $text-color;
+                color: $gray;
                 }
     
                 .post-summary {
                 font-size: $type-size-6;
                 font-family: $sans-serif;
-                color: $text-color;
+                color: $gray;
                 }
 
                 .post-tags {
+                  line-height: 2;
                   .post-tag {
                     font-size: 0.8em;
-                    // font-family: $times;
-                    color: $text-color;
+                    // // font-family: $times;
+                    // color: $text-color;
                     text-decoration: none;
                       &:hover {
                         color: $text-color;
                         text-decoration: underline; 
                     }
+                    padding: 0.2rem 0.5rem;
+                    background-color: $label-color;
+                    color: $text-color;
+                    border-radius: 5px;
                   }
                 }
             }
     
-            @include breakpoint($medium) {
-                .post-item {
-                    flex-direction: row;
-                    justify-content: space-between;
+            // @include breakpoint($medium) {
+            //     .post-item {
+            //         flex-direction: row;
+            //         justify-content: space-between;
 
-                    .post-title {
-                      width: 30%;
-                    }
+            //         .post-title {
+            //           width: 30%;
+            //         }
 
-                    .post-tags {
-                      width: 15%;
-                    }
+            //         .post-tags {
+            //           width: 15%;
+            //         }
                     
-                    .post-meta {
-                      width: 10%;          
-                    }
+            //         .post-meta {
+            //           width: 10%;          
+            //         }
 
-                    .post-summary {
-                      width: 40%;
-                      text-align: right;        
-                    }
-                }
-            }
+            //         .post-summary {
+            //           width: 40%;
+            //           text-align: right;        
+            //         }
+            //     }
+            // }
         }
     }
 }
