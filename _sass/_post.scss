@@ -51,6 +51,20 @@
                 }
             }
         }
+
+        .post-link {
+          color: $gray;
+          margin: 0;
+          a {
+            color: $gray;
+            text-decoration: none;
+            transition: $global-transition;
+            &:hover {
+              color: $text-color;
+              text-decoration: underline;
+            }
+          }
+        }
     }
 
 
@@ -147,7 +161,8 @@
 
             img {
               @include breakpoint($medium) {
-                width: 50%;
+                // max-width: 200px;
+                max-height: 350px;
               }
               max-width: 100%;
               height: auto;
