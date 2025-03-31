@@ -21,6 +21,7 @@
         p {
             font-size: $type-size-6;
             color: $text-color;
+            line-height: 1.7;
         }
     
         .post-date {
@@ -34,7 +35,7 @@
         }
     
         .post-tags {
-            margin-top: 0.8em;
+            margin-top: 0.2em;
             font-size: 0.85em;
         
             .post-tag {
@@ -154,19 +155,32 @@
             }
           
             /* blockquote citations */
-            blockquote + .small {
-              margin-top: -1.5em;
-              padding-left: 1.25rem;
+            blockquote {
+              margin-top: 0.5em;
+              margin-left: 2em;
+              padding-left: 0.5rem;
             }
 
             img {
               @include breakpoint($medium) {
-                // max-width: 200px;
+                max-width: 700px;
                 max-height: 350px;
               }
               max-width: 100%;
               height: auto;
             }
+
+            // li > code {
+            //   font-size: 0.85em;
+            //   padding: 0.05rem 0.3rem;
+            //   background-color: $lighter-gray;
+            //   color: $text-color;
+            //   border-radius: 5px;
+            //   display: inline;
+            //   font-family: $sans-serif;
+            //   box-shadow: none;
+            //   font-style: italic;
+            // }
         }
     }
 }

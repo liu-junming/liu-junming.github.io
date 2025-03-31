@@ -17,10 +17,10 @@ summary: "awesome papers"
 
 - **FAIL: Analyzing Software Failures from the News Using LLMs**. ``ASE 2024`` [[paper]](http://arxiv.org/abs/2406.08221) [[code]](https://anonymous.4open.science/r/FAIL)
 
-    [Summary] Existing failure analysis studies focus on analyzing private logs but often overlook public media like news, which is more accessible. 
-    This paper propose using LLM to collect, summarize, and categorize news related to software failures. 
+    [Summary] Existing failure analysis studies focus on analyzing private logs but often overlook public media like news, which is more accessible.
+    This paper propose using LLM to collect, summarize, and categorize news related to software failures.
     Key findings: 1) LLMs can analyze and classify failure-related news. 2) Many failures are similar across organizations. 3) The severity of failures increases over time.
-    
+
     [Approach]
     1) Search software failure news by keywords.
     2) Filter irrelevant news by LLM.
@@ -37,13 +37,11 @@ summary: "awesome papers"
 - **Uncovering the Limits of Machine Learning for Automatic Vulnerability Detection**. ``USENIX Security 2024`` [[paper]](https://arxiv.org/pdf/2306.17193)
 
     Investigating the overfitting problem and the lack of out-of-distribution generalization in current machine learning models for vulnerability detection.
-    - Overfitting to Unrelated Features
-      - Method: Semantic Preserving Transformations. Datasets enhanced through semantic-preserving transformations are applied to the train, validation, and test datasets to analyze overfitting.
-        - Conclusion 1: Current models tend to overfit on unrelated features, relying on superficial patterns rather than meaningful ones.
-        - Conclusion 2: Enhanced datasets result in poor generalization, as the models perform well on training data but fail to generalize effectively to new data.
+  - Overfitting to Unrelated Features
+    - Method: Semantic Preserving Transformations. Datasets enhanced through semantic-preserving transformations are applied to the train, validation, and test datasets to analyze overfitting.
+      - Conclusion 1: Current models tend to overfit on unrelated features, relying on superficial patterns rather than meaningful ones.
+      - Conclusion 2: Enhanced datasets result in poor generalization, as the models perform well on training data but fail to generalize effectively to new data.
 
-    - Out-of-Distribution Generalization (distinguish vulnerability & patch)
-      - Method: Vulnerability & Patch Dataset. Testing on VulnPatchPairs dataset containing both vulnerable and patched functions.
-      - Conclusion 3: Current models struggle to distinguish between vulnerable and patched functions, indicating poor out-of-distribution generalization.
-
-- ****
+  - Out-of-Distribution Generalization (distinguish vulnerability & patch)
+    - Method: Vulnerability & Patch Dataset. Testing on VulnPatchPairs dataset containing both vulnerable and patched functions.
+    - Conclusion 3: Current models struggle to distinguish between vulnerable and patched functions, indicating poor out-of-distribution generalization.
