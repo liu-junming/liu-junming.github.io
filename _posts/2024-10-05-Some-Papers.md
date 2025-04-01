@@ -9,13 +9,13 @@ summary: "awesome papers"
 
 # AI for Static Analysis
 
-- **Striking a Balance: Pruning False-Positives from Static Call Graphs**. ``ICSE 2022`` [[paper]](http://compilers.cs.ucla.edu/papers/balancing-callgraphs.pdf)
+1. **Striking a Balance: Pruning False-Positives from Static Call Graphs**. ICSE 2022. [[paper]](http://compilers.cs.ucla.edu/papers/balancing-callgraphs.pdf)
 
     1) use dynamic call graph to label the static call graph and train the **call graph pruner**. 2) Then use the pruner **pruning the static call graph** to reduce the FP edges. 3) Apply the pruner to null-pointer analysis helps to reduce the FP from 73% to 23%.
 
 # LLM4SE
 
-- **FAIL: Analyzing Software Failures from the News Using LLMs**. ``ASE 2024`` [[paper]](http://arxiv.org/abs/2406.08221) [[code]](https://anonymous.4open.science/r/FAIL)
+1. **FAIL: Analyzing Software Failures from the News Using LLMs**. ASE 2024. [[paper]](http://arxiv.org/abs/2406.08221) [[code]](https://anonymous.4open.science/r/FAIL)
 
     [Summary] Existing failure analysis studies focus on analyzing private logs but often overlook public media like news, which is more accessible.
     This paper propose using LLM to collect, summarize, and categorize news related to software failures.
@@ -34,7 +34,7 @@ summary: "awesome papers"
         a. Taxonomy of sofeware faults (multi-choice by LLM).
         b. Additional details about incident (open-ended): LLM extracts relevant fields and definitions from incidents.
 
-- **Uncovering the Limits of Machine Learning for Automatic Vulnerability Detection**. ``USENIX Security 2024`` [[paper]](https://arxiv.org/pdf/2306.17193)
+2. **Uncovering the Limits of Machine Learning for Automatic Vulnerability Detection**. USENIX Security 2024. [[paper]](https://arxiv.org/pdf/2306.17193)
 
     Investigating the overfitting problem and the lack of out-of-distribution generalization in current machine learning models for vulnerability detection.
   - Overfitting to Unrelated Features
