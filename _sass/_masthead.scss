@@ -66,4 +66,58 @@
   }
 }
 
+/* Submenu styles */
+.masthead__submenu {
+  position: absolute;
+  background-color: $header-color;
+  // box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  // padding-top: 0.5em !important;
+  z-index: 1;
+  list-style-type: none;
+  // border-radius: 4px; 
+  // border: 1px solid rgba(0,0,0,0.1); 
+  display: none; 
+  box-sizing: border-box; 
+  
+  /* Override and zero out any inherited margins */
+  * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.masthead__menu-item:hover .masthead__submenu,
+.masthead__menu-item:focus-within .masthead__submenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.masthead__submenu-item {
+  display: block;
+  width: 100%;
+  float: none;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.masthead__submenu-item a {
+  color: $masthead-link-color;
+  padding: 0.65em 1em !important;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+  font-weight: normal !important;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: darken($header-color, 5%);
+    color: darken($masthead-link-color, 15%);
+  }
+}
+
 
