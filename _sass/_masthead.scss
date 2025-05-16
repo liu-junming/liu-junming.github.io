@@ -48,6 +48,7 @@
 
 .masthead__menu-home-item {
   background-color: $header-color;
+  margin-left: 1em;
   @include breakpoint($medium) {
     display: block !important;
   }
@@ -119,5 +120,3 @@
     color: darken($masthead-link-color, 15%);
   }
 }
-
-

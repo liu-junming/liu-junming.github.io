@@ -150,6 +150,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
+  - simple-jekyll-search
   # - jekyll-tagging
 # mimic GitHub Pages with --safe
 whitelist:

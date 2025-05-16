@@ -1,0 +1,11 @@
+[
+  {% assign posts_and_pages = site.posts | concat: site.pages | where_exp: "item", "item.title and item.title != 'Search Results'" %}
+  {% for item in posts_and_pages %}
+  {
+    "title": "{{ item.title | escape }}",
+    "url": "{{ item.url | prepend: site.baseurl | escape }}",
+    "date": "{{ item.date | date: '%B %d, %Y' | escape }}",
+    "content": "{{ item.content | strip_html | strip_newlines | escape }}"
+  }{% if forloop.last == false %},{% endif %}
+  {% endfor %}
+]
