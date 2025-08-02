@@ -9,7 +9,7 @@
 <div class='title'>Exploring ChatGPT's Capabilities on Vulnerability Management</div>
 
 <div class='author'>
-<span class="author-list">Peiyu Liu*, Junming Liu*, Lirong Fu, Kangjie Lu, Yifan Xia</span><span class="author-hidden">, Xuhong Zhang, Wenzhi Chen, Haiqin Weng, Shouling Ji, Wenhai Wang (*equal contribution)</span><span class="show-more-authors" onclick="toggleAuthors(this)"> ...more</span>
+<span class="author-list">Peiyu Liu*, <div class="my-name">Junming Liu*</div>, Lirong Fu, Kangjie Lu, Yifan Xia</span><span class="author-hidden">, Xuhong Zhang, Wenzhi Chen, Haiqin Weng, Shouling Ji, Wenhai Wang (*equal contribution)</span><span class="show-more-authors" onclick="toggleAuthors(this)"> ...more</span>
 </div>
 
 <div class='abstract'>Evaluation of ChatGPT’s capabilities across the entire vulnerability management lifecycle in six tasks, investigating prompt engineering impacts and identifying performance bottlenecks.</div>
