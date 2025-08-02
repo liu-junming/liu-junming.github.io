@@ -2,6 +2,8 @@
 
 <h2>Artifact Evaluation Committee</h2>
 
-<li> USENIX Security 2025
+<ul>
+    <li> USENIX Security 2025</li>
+</ul>
 
 <h1></h1>

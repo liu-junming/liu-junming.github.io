@@ -28,15 +28,32 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    border-bottom: 1px #efefef solid;
-    padding-bottom: 1em;
+    // border: 1px #e8e8e8 solid;
+    padding: 1.5em;
+    // margin-bottom: 1em;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    
+    &:hover {
+        background-color: $code-background-color;
+        // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+    }
     
     .paper-box-image{
         display: none;
-        align-items: flex-start;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         order: 1;
+        flex-direction: column;
+        
+        .journal{
+            color: $darker-gray;
+            margin-bottom: 0.5em;
+            text-align: center;
+        }
+        
         img {
             max-width: 400px;
             // box-shadow: 1px 1px 2px #888;
@@ -52,26 +69,66 @@
         
         .title{
             font-size: $type-size-4;
-            font-weight: bold;
+            font-weight: 500;
             margin-bottom: 0.2em;
-            color: $dark-gray;
+            color: $darker-gray;
         }
 
         .abstract{
             color: $gray;
             padding: 0em 0 0.85em 0;
+            line-height: 1.6em;
+            margin-bottom: 0.6em;
         }
 
         .journal{
-            color: $darker-gray;
+            color: $dark-gray;
             font-weight: 500;
+            margin-bottom: 0.5em;
+            
+            img {
+                height: 1.1em;
+                width: auto;
+                vertical-align: middle;
+                margin-right: 0.3em;
+                display: inline-block;
+            }
         }
 
         .author{
-            color: $dark-gray;
+            color: $gray;
+            font-size: $type-size-6;
+            font-weight: 400;
+            // letter-spacing: 0.4px;
+            margin-bottom: 0.4em;
+
             .my-name{
                 display: inline;
                 font-weight: 600;
+            }
+            
+            .author-list {
+                display: inline;
+            }
+            
+            .author-hidden {
+                display: none;
+                
+                &.show {
+                    display: inline;
+                }
+            }
+            
+            .show-more-authors {
+                color: $badge-color;
+                cursor: pointer;
+                text-decoration: underline;
+                font-weight: 500;
+                margin-left: 0.3em;
+                
+                &:hover {
+                    color: darken($badge-color, 15%);
+                }
             }
         }
     }
@@ -104,14 +161,15 @@
             justify-content: flex-start;
             min-width: 200px;
             max-width: 30%;
-            order: 1;
+            order: 2;
+            flex-direction: column;
         }
         
         .paper-box-text{
             justify-content: left;
-            padding-left: 2em;
+            padding-right: 2em;
             max-width: 70%;
-            order: 2;
+            order: 1;
         }
     }
 

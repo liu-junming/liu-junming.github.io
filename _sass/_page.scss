@@ -208,12 +208,12 @@
     // text-decoration: underline;
     text-decoration: none;
     color: $theme-link-color;
-    font-weight: 600;
+    font-weight: 500;
 
     &:hover {
       // text-decoration: underline;
       color: $theme-link-color-hover;
-      font-weight: 600;
+      font-weight: 500;
 
       img {
         box-shadow: 0 0 10px rgba(#000, 0.25);
