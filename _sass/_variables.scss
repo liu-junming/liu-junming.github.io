@@ -20,6 +20,13 @@ $serif                      : Times, serif;
 $sans-serif                 : "Noto Sans", Montserrat, Helvetica, "Helvetica Neue", Arial, sans-serif;
 $monospace                  : Monaco, Consolas, "Lucida Console", monospace;
 
+/* 中文像素字体 */
+$pixel-font-cn              : "Zpix", "Fusion Pixel Font", "PixelMplus", "BmHanna Pro", "Cubic 11", $monospace;
+$pixel-font-en              : "Press Start 2P", $monospace;
+
+/* 混合像素字体栈 - 支持中英文 */
+$pixel-font-mixed           : "Press Start 2P", "Zpix", "Fusion Pixel Font", "PixelMplus", "Noto Sans Mono CJK SC", "Sarasa Mono SC", "Source Han Mono", $monospace;
+
 /* sans serif typefaces */
 $sans-serif-narrow          : $sans-serif;
 $helvetica                  : Helvetica, "Helvetica Neue", Arial, sans-serif;
@@ -173,3 +180,36 @@ $box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
 $navicon-width              : 28px;
 $navicon-height             : 4px;
 $global-transition          : all 0.2s ease-in-out;
+
+/*
+   Pixel Art Colors - Cyberpunk Style
+   ========================================================================== */
+
+$pixel-black                : #0a0a0f;
+$pixel-white                : #ffffff;
+$pixel-dark-blue            : #0d1421;
+$pixel-blue                 : #1a2332;
+$pixel-light-blue           : #2a3f5f;
+$pixel-highlight            : #ff00ff; 
+$pixel-red                  : rgb(200, 60, 80);
+$pixel-yellow               : #ffff00;
+$pixel-green                : #00ff80;
+$pixel-purple               : #8000ff; 
+$pixel-neon-blue            : rgb(55,123,240);
+$pixel-neon-blue-ligher     : #0080ffb8;
+$pixel-neon-purple          : #a000ff; 
+$pixel-cyberpunk-bg         : rgb(66, 64, 245); 
+$pixel-font                 : $pixel-font-mixed;
+
+$pixel-background           : rgb(66, 64, 245);
+$pixel-blue                 : #8aa7ff;
+$pixel-blue-ligher          : rgb(136, 96, 255);
+$pixel-blue-darker          : rgb(64, 73, 171);
+
+$pixel-accent               : rgb(255, 192, 252); 
+$pixel-accent-light         : rgb(255, 112, 150);
+$pixel-accent-dark          : rgb(117,66,99);
+
+$pixel-orange               : rgb(255, 154, 72);
+$pixel-orange-light         : #D2691E;
+$pixel-orange-dark          : #8B4513;

@@ -1,0 +1,2876 @@
+/* ==========================================================================
+   SINGLE PAGE/POST
+   ========================================================================== */
+
+#main {
+  @include container;
+  @include clearfix;
+  margin-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  animation: intro 0.3s both;
+  animation-delay: 0.35s;
+
+  @include breakpoint($x-large) {
+    max-width: $x-large;
+  }
+}
+
+.page {
+  @include breakpoint($large) {
+    @include span(12 of 12 last);
+    @include prefix(2 of 12);
+    @include suffix(2 of 12);
+  }
+
+  .page__inner-wrap {
+    @include full();
+
+    .page__content,
+    .page__meta,
+    .page__share {
+      @include full();
+    }
+  }
+}
+
+.page-about_background {
+  @include container;
+  @include clearfix;
+  background-color: $about-background-color;
+  animation: intro 0.3s both;
+  animation-delay: 0.35s;
+  border-bottom: 1px solid $about-border-color;
+  max-width: none;
+}
+
+.page-about {
+  @include breakpoint($large) {
+    @include span(12 of 12 last);
+    @include prefix(2 of 12);
+    @include suffix(2 of 12);
+  }
+
+  .page__inner-wrap {
+    @include full();
+
+    .page__content,
+    .page__meta,
+    .page__share {
+      @include full();
+    }
+  }
+}
+
+.page__title {
+  margin-top: 0;
+  line-height: 1;
+
+  &+.page__meta {
+    margin-top: -0.5em;
+  }
+}
+
+.page__lead {
+  font-family: $global-font-family;
+  font-weight: $global-font-weight;
+  font-size: $type-size-4;
+}
+
+.page__content {
+  .about-me {
+    @include breakpoint($large) {
+      @include span(12 of 12 last);
+      @include prefix(2 of 12);
+      @include suffix(2 of 12);
+    }
+
+    height: 100vh;
+    color: $about-text-color;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    text-align: center;
+    margin-bottom: 2em;
+
+    .name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1em;
+
+      .english {
+        display: inline-block;
+        border-bottom: none;
+        font-size: $type-size-2;
+        font-weight: 600;
+        margin-right: 0.5em;
+      }
+
+      .chinese {
+        display: inline-block;
+        font-family: $global-font-family;
+        font-size: $type-size-3;
+        font-weight: 400;
+      }
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      font-size: $type-size-3;
+
+      a {
+        margin: 0 0.3em;
+        // font-size: $type-size-1;
+        text-decoration: none;
+        color: $link-color;
+
+        &:hover {
+          color: $link-color-hover;
+        }
+      }
+    }
+
+    img {
+      margin-top: 2em;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      // center
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include breakpoint($large) {
+        padding: 5px;
+        border: 1px solid $border-color;
+      }
+
+    }
+
+    h3 {
+      font-size: $type-size-3;
+      font-family: $global-font-family;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.2em;
+      font-family: $global-font-family;
+      font-weight: 400;
+      margin-bottom: 2em;
+    }
+
+    .highlight {
+      font-weight: 600;
+      color: $about-text-color;
+      display: inline;
+      text-align: center;
+    }
+  }
+
+  h1 {
+    margin-top: 1.5em;
+    // margin-left: -0.5em;
+    margin-right: -0.5em;
+    padding-bottom: 0.5em;
+    font-size: $type-size-3;
+    color: $darker-gray;
+    // border-bottom: 1px solid $border-color;
+  }
+
+  h2 {
+    margin-top: 1em;
+    font-size: $type-size-4;
+    // padding-bottom: 0.5em;
+  }
+
+  p,
+  li,
+  dl {
+    font-size: 1em;
+  }
+
+  /* paragraph indents */
+  p {
+    margin: 0 0 $indent-var;
+
+    /* sibling indentation*/
+    @if $paragraph-indent ==true {
+      &+p {
+        text-indent: $indent-var;
+        margin-top: -($indent-var);
+      }
+    }
+  }
+
+  a {
+    // text-decoration: underline;
+    text-decoration: none;
+    color: $theme-link-color;
+    font-weight: 500;
+
+    &:hover {
+      // text-decoration: underline;
+      color: $theme-link-color-hover;
+      font-weight: 500;
+
+      img {
+        box-shadow: 0 0 10px rgba(#000, 0.25);
+      }
+    }
+  }
+
+  dt {
+    margin-top: 1em;
+    font-family: $sans-serif;
+    font-weight: bold;
+  }
+
+  dd {
+    margin-left: 1em;
+    font-family: $sans-serif;
+    font-size: $type-size-6;
+  }
+
+  .small {
+    font-size: $type-size-6;
+  }
+
+  /* blockquote citations */
+  blockquote+.small {
+    margin-top: -1.5em;
+    padding-left: 1.25rem;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+}
+
+.page__hero {
+  position: relative;
+  margin-bottom: 2em;
+  @include clearfix;
+  animation: intro 0.3s both;
+  animation-delay: 0.25s;
+
+  &--overlay {
+    position: relative;
+    margin-bottom: 2em;
+    padding: 3em 0;
+    @include clearfix;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: intro 0.3s both;
+    animation-delay: 0.25s;
+
+    a {
+      color: #fff;
+    }
+
+    .wrapper {
+      padding-left: 1em;
+      padding-right: 1em;
+
+      @include breakpoint($x-large) {
+        max-width: $x-large;
+      }
+    }
+
+    .page__title,
+    .page__meta,
+    .page__lead,
+    .btn {
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(#000, 0.5);
+    }
+
+    .page__lead {
+      max-width: $medium;
+    }
+
+    .page__title {
+      font-size: $type-size-2;
+
+      @include breakpoint($small) {
+        font-size: $type-size-1;
+      }
+    }
+  }
+}
+
+.page__hero-image {
+  width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
+
+.page__hero-caption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 2px 5px;
+  color: #fff;
+  font-family: $caption-font-family;
+  font-size: $type-size-7;
+  background: #000;
+  text-align: right;
+  z-index: 5;
+  opacity: 0.5;
+  border-radius: $border-radius 0 $border-radius 0;
+
+  @include breakpoint($large) {
+    padding: 5px 10px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+/*
+   Social sharing
+   ========================================================================== */
+
+.page__share {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid $border-color;
+
+  @include breakpoint(max-width $small) {
+    .btn span {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+  }
+}
+
+.page__share-title {
+  margin-bottom: 10px;
+  font-size: $type-size-6;
+  text-transform: uppercase;
+}
+
+
+/*
+   Page meta
+   ========================================================================== */
+
+.page__meta {
+  margin-top: 2em;
+  color: mix(#fff, $gray, 25%);
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.page__meta-title {
+  margin-bottom: 10px;
+  font-size: $type-size-6;
+  text-transform: uppercase;
+}
+
+
+/*
+   Page taxonomy
+   ========================================================================== */
+
+.page__taxonomy {
+  .sep {
+    display: none;
+  }
+
+  strong {
+    margin-right: 10px;
+  }
+}
+
+.page__taxonomy-item {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid $light-gray;
+  border-radius: $border-radius;
+
+  &:hover {
+    text-decoration: none;
+    color: $link-color-hover;
+  }
+}
+
+
+/*
+   Comments
+   ========================================================================== */
+
+.page__comments {
+  @include full();
+}
+
+.page__comments-title {
+  margin-top: 2rem;
+  margin-bottom: 10px;
+  padding-top: 2rem;
+  font-size: $type-size-6;
+  border-top: 1px solid $border-color;
+  text-transform: uppercase;
+}
+
+.page__comments-form {
+  padding: 1em;
+  background: $lighter-gray;
+  transition: $global-transition;
+
+  &.disabled {
+
+    input,
+    button,
+    textarea,
+    label {
+      pointer-events: none;
+      cursor: not-allowed;
+      filter: alpha(opacity=65);
+      box-shadow: none;
+      opacity: 0.65;
+    }
+  }
+}
+
+.comment {
+  @include clearfix();
+  margin: 1em 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.comment__avatar-wrapper {
+  float: left;
+  width: 60px;
+  height: 60px;
+
+  @include breakpoint($large) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.comment__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  @include breakpoint($large) {
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    border: 1px solid $border-color;
+  }
+}
+
+.comment__content-wrapper {
+  float: right;
+  width: calc(100% - 60px);
+
+  @include breakpoint($large) {
+    width: calc(100% - 100px);
+  }
+}
+
+.comment__author {
+  margin: 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.comment__date {
+  @extend .page__meta;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+
+/*
+   Related
+   ========================================================================== */
+
+.page__related {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid $border-color;
+  @include clearfix();
+  float: left;
+
+  @include breakpoint($large) {
+    @include pre(2.5 of 12);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/*
+   Smooth scrolling and animations
+   ========================================================================== */
+
+// 优化平滑滚动
+html {
+  scroll-behavior: smooth;
+}
+
+// 确保滚动吸附到正确位置
+body {
+  overflow-x: hidden; // 防止水平滚动
+}
+
+// 弹跳动画for向下滚动提示
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) rotate(90deg) translateY(0);
+  }
+
+  40% {
+    transform: translateX(-50%) rotate(90deg) translateY(-10px);
+  }
+
+  60% {
+    transform: translateX(-50%) rotate(90deg) translateY(-5px);
+  }
+}
+
+// 滚动容器的样式
+.scroll-section {
+  min-height: 100vh;
+  position: relative;
+}
+
+// 确保about-me部分占据完整视窗
+.page__content .about-me {
+  // 防止触摸设备上的滚动弹跳
+  -webkit-overflow-scrolling: touch;
+  // 确保在移动设备上也能正确计算高度
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/*
+   Cyberpunk Pixel Art About-Me Section
+   ========================================================================== */
+
+.pixel-about-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/*
+   Cyberpunk Database Terminal Interface
+   ========================================================================== */
+
+// 赛博朋克数据库终端
+.cyber-terminal {
+  width: 100vw;
+  height: 100vh;
+  max-width: 1400px;
+  max-height: 900px;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  
+  font-family: $pixel-font;
+  background: $pixel-cyberpunk-bg;
+  border: 2px solid $pixel-neon-blue;
+}
+
+// 终端标题栏 - 数据库风格
+.terminal-header {
+  background: $pixel-cyberpunk-bg;
+  border-bottom: 2px solid $pixel-neon-blue-ligher;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  font-family: $pixel-font;
+  position: relative;
+  
+  // 数据流动效果
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   height: 2px;
+  //   background: linear-gradient(90deg, 
+  //     transparent 0%, 
+  //     $pixel-neon-blue 100%, 
+  //     transparent 100%
+  //   );
+  //   animation: data-flow-line 3s infinite ease-in-out;
+  // }
+
+  .terminal-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    .status-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 0;
+      background: $pixel-accent;
+      box-shadow: 0 0 8px rgba($pixel-accent, 0.8);
+      animation: status-blink 2s infinite;
+      
+      &.online {
+        background: #00FF00;
+        box-shadow: 0 0 8px rgba(0, 255, 0, 0.8);
+      }
+    }
+    
+    .status-text {
+      color: $pixel-accent;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  }
+
+  .terminal-title {
+    color: $pixel-accent;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+  }
+
+  .terminal-time {
+    color: $pixel-neon-purple;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    
+    #cyber-time {
+      animation: time-flicker 1s infinite;
+    }
+  }
+}
+
+// 数据库导航栏
+.database-nav {
+  height: 50px;
+  background: $pixel-cyberpunk-bg;
+  border-bottom: 2px solid $pixel-neon-blue-ligher;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  
+  .nav-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    
+    .nav-label {
+      color: $pixel-white;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      padding: 8px 12px;
+      border: 1px solid $pixel-accent;
+      background: rgba($pixel-accent, 0.1);
+    }
+    
+    .nav-items {
+      display: flex;
+      flex: 1; // 占满剩余空间
+      
+      .nav-item {
+        flex: 1; // 每个item平均占用空间
+        padding: 12px 20px;
+        border: 1px solid transparent;
+        color: $pixel-white !important;
+        text-decoration: none !important;
+        font-size: 14px;
+        font-weight: normal;
+        letter-spacing: 1px;
+        position: relative;
+        transition: all 0.3s ease;
+        text-align: center; // 文字居中
+        
+        // 添加竖线分隔符（除了最后一个item）
+        &:not(:last-child)::after {
+          content: '|';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          color: $pixel-neon-blue;
+          font-size: 16px;
+          opacity: 0.6;
+        }
+        
+        // 数据链接指示器
+        // &::before {
+        //   content: '>';
+        //   position: absolute;
+        //   left: 20px;
+        //   top: 50%;
+        //   transform: translateY(-50%);
+        //   color: $pixel-neon-blue;
+        //   font-size: 10px;
+        //   opacity: 0;
+        //   transition: opacity 0.3s ease;
+        // }
+        
+        &:hover {
+          // border: 1px solid $pixel-neon-blue;
+          background: linear-gradient(135deg, 
+              rgba($pixel-neon-blue, 0.2) 0%, 
+              rgba($pixel-dark-blue, 0.4) 100%
+            );
+          color: $pixel-accent !important;
+          // box-shadow: 
+          //   0 0 15px rgba($pixel-neon-blue, 0.4),
+          //   inset 0 0 10px rgba($pixel-neon-blue, 0.1);
+          padding-left: 24px;
+          
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 数据库内容面板
+.database-content {
+  flex: 1;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: $pixel-cyberpunk-bg;
+}
+
+// 数据面板布局
+.data-panels {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: calc(100% - 120px); // 为访问控制区域留出空间
+  max-width: 100%;
+  
+  // 响应式布局
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+  }
+}
+
+// 确保左侧面板占1/3，明确位置
+.left-panel {
+  flex: 1;
+  // min-width: 0; // 防止内容溢出
+  order: 1; // 明确指定顺序：左侧第一
+}
+
+// 确保右侧面板占2/3，明确位置
+.right-panel {
+  flex: 2;
+  // min-width: 0; // 防止内容溢出
+  order: 2; // 明确指定顺序：右侧第二
+}
+
+// 数据面板样式
+.data-panel {
+  background: $pixel-cyberpunk-bg;
+  border: 1px solid $pixel-neon-blue;
+  box-shadow: 
+    0 0 20px rgba($pixel-neon-blue, 0.3),
+    inset 0 0 20px rgba($pixel-neon-blue, 0.05);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%; // 确保填满Grid容器的高度
+  
+  // 面板发光边框
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid transparent;
+    border-image: linear-gradient(45deg, 
+      transparent 0%, 
+      $pixel-neon-blue 50%, 
+      transparent 100%
+    ) 1;
+    pointer-events: none;
+    animation: panel-glow 4s infinite ease-in-out;
+  }
+  
+  .panel-header {
+    height: 40px;
+    background: 
+      linear-gradient(135deg, 
+        rgba($pixel-neon-blue, 0.2) 0%, 
+        rgba($pixel-dark-blue, 0.3) 100%
+      );
+    border-bottom: 1px solid $pixel-neon-blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    // flex-shrink: 0; // 防止标题栏被压缩
+    
+    .panel-title {
+      color: $pixel-accent;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    
+    .panel-id,
+    .panel-status {
+      color: $pixel-accent;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 4px 8px;
+      border: 1px solid $pixel-accent;
+      margin-left: 4px;
+      background: rgba($pixel-accent, 0.1);
+    }
+    
+    .panel-status {
+      color: #00FF00;
+      border-color: #00FF00;
+      background: rgba(0, 255, 0, 0.1);
+      animation: status-pulse 2s infinite;
+    }
+  }
+}
+
+// 确保左侧面板占1/3
+.left-panel {
+  flex: 1;
+  min-width: 0; // 防止内容溢出
+  
+  .data-entry {
+    padding: 15px;
+    text-align: center;
+    flex: 1; // 填满剩余空间
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 0; // 允许内容缩放
+    
+    .entry-avatar {
+      position: relative;
+      margin-bottom: 20px;
+      align-self: center;
+      flex-shrink: 0; // 防止头像被压缩
+      
+      .avatar-frame {
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 140px;
+        height: 140px;
+        border: 2px solid $pixel-neon-blue;
+        border-radius: 0;
+        box-shadow: 
+          0 0 15px rgba($pixel-neon-blue, 0.5),
+          inset 0 0 15px rgba($pixel-neon-blue, 0.1);
+        
+        // 扫描线效果
+        // &::after {
+        //   content: '';
+        //   position: absolute;
+        //   top: 0;
+        //   left: 0;
+        //   right: 0;
+        //   height: 2px;
+        //   background: linear-gradient(90deg,
+        //     transparent 0%,
+        //     $pixel-accent 50%,
+        //     transparent 100%
+        //   );
+        //   animation: scan-line 3s infinite ease-in-out;
+        // }
+      }
+      
+      .subject-image {
+        width: 124px;
+        height: 124px;
+        object-fit: cover;
+        image-rendering: pixelated;
+      }
+      
+      .scan-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: 
+          linear-gradient(0deg,
+            transparent 0%,
+            transparent 45%,
+            rgba($pixel-accent, 0.8) 50%,
+            transparent 55%,
+            transparent 100%
+          );
+        animation: vertical-scan 4s infinite ease-in-out;
+        pointer-events: none;
+      }
+    }
+  }
+  
+  .data-connections {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto;
+    
+    .data-link {
+      display: flex;
+      align-items: center;
+      justify-content: center; // 让内容水平居中
+      padding: 10px 14px;
+      // background: 
+      //   linear-gradient(135deg,
+      //     rgba($pixel-dark-blue, 0.8) 0%,
+      //     rgba($pixel-black, 0.9) 100%
+      //   );
+      border: 1px solid $pixel-neon-blue;
+      border-left: 4px solid $pixel-neon-blue; // 加粗左边框
+      color: #FFFFFF !important;
+      text-decoration: none !important;
+      transition: all 0.3s ease;
+      position: relative;
+      font-size: 13px;
+      
+      .link-icon {
+        color: $pixel-neon-blue;
+        font-size: 14px;
+        margin-right: 10px;
+        font-weight: bold;
+        min-width: 16px;
+      }
+      
+      .link-text {
+        font-size: 13px;
+        font-weight: bold;
+        letter-spacing: 0.8px;
+      }
+      
+      &:hover {
+        border-color: $pixel-neon-blue;
+        border-left: 4px solid $pixel-neon-blue; // hover时左边框也保持加粗
+        background: 
+          linear-gradient(135deg,
+            rgba($pixel-neon-blue, 0.2) 0%,
+            rgba($pixel-dark-blue, 0.4) 100%
+          );
+        box-shadow: 0 0 12px rgba($pixel-neon-blue, 0.4);
+        
+        .link-icon {
+          color: $pixel-accent;
+          animation: link-pulse 0.5s ease;
+        }
+      }
+    }
+  }
+}
+
+// 确保右侧面板占2/3
+.right-panel {
+  flex: 2;
+  min-width: 0; // 防止内容溢出
+  
+  .data-fields {
+    padding: 20px;
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    min-height: 0; 
+    
+    .data-field {
+      display: flex;
+      align-items: flex-start;
+      // margin-bottom: 18px;
+      padding: 10px 0;
+      border-bottom: 2px solid rgba($pixel-neon-blue, 0.5);
+      
+      &:nth-last-child(2) {
+        border-bottom: none;
+      }
+      
+      .field-label {
+        color: $pixel-accent;
+        font-size: 11px;
+        font-weight: 200;
+        letter-spacing: 1px;
+        min-width: 120px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      
+      .field-value {
+        color: $pixel-accent;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        font-family: $pixel-font-mixed;
+        image-rendering: pixelated;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: crisp-edges;
+        font-smooth: never;
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: unset;
+        
+        &.chinese{
+          font-family: $pixel-font-cn;
+        }
+
+        &.highlight {
+          // color: $pixel-neon-blue;
+          // text-shadow: 0 0 8px rgba(#00FFFF, 0.4);
+          font-size: 16px;
+        }
+      }
+    }
+    
+    .research-tags {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      // margin-top: auto; // 推到底部
+      flex-shrink: 0; // 防止被压缩
+      align-items: flex-start; // 左对齐
+      margin-left: 90px;
+      
+      .research-tag {
+        display: block;
+        padding: 8px 0px;
+        // background: 
+        //   linear-gradient(135deg,
+        //     rgba($pixel-accent, 0.15) 0%,
+        //     rgba($pixel-dark-blue, 0.2) 100%
+        //   );
+        // border: 1px solid rgba($pixel-accent, 0.6);
+        color: $pixel-accent;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        text-align: left;
+        cursor: default; // 显示默认光标而不是指针
+        user-select: none; // 防止文本选择
+        
+        // 添加数据标记符号
+        &::before {
+          content: '> ';
+          color: rgba($pixel-neon-blue, 0.7);
+          font-size: 12px;
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+}
+
+// 访问控制区域
+.access-control {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: 
+    linear-gradient(135deg,
+      rgba($pixel-black, 0.9) 0%,
+      rgba($pixel-dark-blue, 0.8) 100%
+    );
+  border: 1px solid $pixel-neon-purple;
+  padding: 0 30px;
+  box-shadow: 0 0 20px rgba($pixel-neon-purple, 0.3);
+  
+  .access-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    .access-icon {
+      color: $pixel-yellow;
+      font-size: 20px;
+      animation: access-flash 2s infinite;
+    }
+    
+    .access-text {
+      color: #00FF00;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  }
+  
+  .access-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background: rgba($pixel-accent, 0.1);
+    border: 1px solid $pixel-accent;
+    color: $pixel-accent !important;
+    text-decoration: none !important;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    
+    .button-text {
+      font-size: 16px;
+      z-index: 2;
+      position: relative;
+    }
+    
+    .button-arrow {
+      font-size: 18px;
+      z-index: 2;
+      position: relative;
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        transparent 100%
+      );
+      transition: left 0.5s ease;
+    }
+    
+    &:hover {
+      box-shadow: 
+        0 0 20px rgba($pixel-accent, 0.6),
+        0 0 40px rgba($pixel-accent, 0.4);
+      transform: scale(1.05);
+      
+      &::before {
+        left: 100%;
+      }
+    }
+  }
+}
+
+// 纯赛博朋克浏览器窗口样式
+.browser-window {
+  width: 100vw;
+  height: 100vh;
+  background: 
+    // 赛博朋克数据流背景
+    linear-gradient(135deg,
+      rgba($pixel-black, 0.95) 0%,
+      rgba($pixel-dark-blue, 0.9) 20%,
+      rgba($pixel-cyberpunk-bg, 0.85) 40%,
+      rgba($pixel-black, 0.9) 60%,
+      rgba($pixel-dark-blue, 0.95) 80%,
+      rgba($pixel-black, 0.98) 100%
+    );
+  border: 3px solid transparent;
+  border-image: linear-gradient(45deg, 
+    $pixel-neon-blue 0%, 
+    $pixel-accent 25%, 
+    $pixel-neon-purple 50%, 
+    $pixel-neon-blue 75%,
+    $pixel-accent 100%
+  ) 1;
+  box-shadow:
+    // 强烈的赛博朋克发光效果
+    0 0 40px rgba($pixel-neon-blue, 0.8),
+    0 0 80px rgba($pixel-accent, 0.6),
+    0 0 120px rgba($pixel-neon-purple, 0.4),
+    0 0 160px rgba($pixel-highlight, 0.3),
+    // 内部光晕
+    inset 0 0 50px rgba($pixel-neon-blue, 0.2),
+    inset 0 0 100px rgba($pixel-accent, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: $pixel-font;
+  position: relative;
+  flex-shrink: 0;
+  
+  // 像素化渲染
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  
+  // 赛博朋克边框动画效果
+  &::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(45deg, 
+      $pixel-neon-blue, 
+      $pixel-accent, 
+      $pixel-neon-purple, 
+      $pixel-neon-blue
+    );
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: cyberpunk-border 4s ease infinite;
+    opacity: 0.8;
+  }
+  
+  // 强化赛博朋克脉冲动画
+  animation: cyberpunk-pulse 6s infinite ease-in-out;
+}
+
+// 纯赛博朋克浏览器标题栏 - 优化版
+.browser-header {
+  height: 35px;
+  background: 
+    // 简化背景，提高对比度
+    linear-gradient(135deg, 
+      rgba($pixel-black, 0.95) 0%, 
+      rgba($pixel-dark-blue, 0.9) 50%, 
+      rgba($pixel-black, 0.95) 100%
+    );
+  border-bottom: 2px solid $pixel-neon-blue-ligher;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 12px;
+  font-family: $pixel-font;
+  font-size: 14px;
+  color: $pixel-neon-blue;
+  position: relative;
+  
+  // 简化为一条底部发光线
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: $pixel-neon-blue;
+    box-shadow: 0 0 8px rgba($pixel-neon-blue, 0.6);
+  }
+  
+  box-shadow: 
+    0 2px 10px rgba($pixel-neon-blue, 0.3),
+    inset 0 1px 0 rgba($pixel-neon-blue, 0.2);
+
+  .browser-title {
+    color: $pixel-accent; // 使用纯青色，最大对比度
+    font-size: 14px;
+    font-weight: bold;
+    // 增强文字对比度
+    text-shadow: 
+      0 0 3px rgba(0, 255, 255, 1),
+      0 0 6px rgba(0, 255, 255, 0.8),
+      2px 2px 4px rgba(0, 0, 0, 1); // 强化黑色阴影
+    text-shadow: 
+      1px 1px 0px rgba(0, 0, 0, 0.8),
+      0 0 3px rgba(255, 255, 255, 0.3); // 像素发光效果
+    flex: 1;
+    text-align: left;
+    padding: 0 12px;
+    letter-spacing: 0.5px; // 更好的像素字体间距
+  }
+
+  .browser-controls {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+
+    .control-dot {
+      width: 16px;
+      height: 14px;
+      border-radius: 0;
+      display: inline-block;
+      border: 1px outset #c0c0c0;
+      background: 
+        // 像素点纹理
+        radial-gradient(circle at 1px 1px, rgba(255,255,255,0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, #f0f0f0 0%, #e0e0e0 25%, #d0d0d0 50%, #c0c0c0 75%, #b0b0b0 100%);
+      background-size: 2px 2px, 100% 100%;
+      font-size: 8px;
+      text-align: center;
+      line-height: 12px;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 
+        inset 1px 1px 0px rgba(255,255,255,0.5),
+        inset -1px -1px 0px rgba(128,128,128,0.5);
+
+      &:hover {
+        background: 
+          radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 1px),
+          linear-gradient(to bottom, #ffffff 0%, #f0f0f0 25%, #e0e0e0 50%, #d0d0d0 75%, #c0c0c0 100%);
+        background-size: 2px 2px, 100% 100%;
+      }
+      
+      &:active {
+        border: 1px inset #c0c0c0;
+        background: 
+          radial-gradient(circle at 1px 1px, rgba(0,0,0,0.1) 1px, transparent 1px),
+          linear-gradient(to bottom, #a0a0a0 0%, #b0b0b0 25%, #c0c0c0 50%, #d0d0d0 75%, #e0e0e0 100%);
+        background-size: 2px 2px, 100% 100%;
+      }
+
+      &.minimize {
+        &::after {
+          content: "_";
+        }
+      }
+
+      &.maximize {
+        &::after {
+          content: "□";
+        }
+      }
+
+      &.close {
+        &::after {
+          content: "✕";
+        }
+
+        &:hover {
+          background: 
+            radial-gradient(circle at 1px 1px, rgba(255,255,255,0.2) 1px, transparent 1px),
+            linear-gradient(to bottom, #ff4444 0%, #ff0000 50%, #cc0000 100%);
+          background-size: 2px 2px, 100% 100%;
+          color: white;
+          text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+        }
+      }
+    }
+  }
+
+  .browser-menu {
+    // 移除，改用控制按钮
+    display: none;
+  }
+}
+
+// 纯赛博朋克菜单栏 - 优化版
+.browser-menubar {
+  height: 30px;
+  background: 
+    // 简化背景，深色底色确保对比度
+    linear-gradient(135deg, 
+      rgba($pixel-black, 0.9) 0%, 
+      rgba($pixel-dark-blue, 0.85) 50%, 
+      rgba($pixel-black, 0.9) 100%
+    );
+  border-bottom: 1px solid $pixel-accent;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  font-family: $pixel-font;
+  font-size: 12px;
+  position: relative;
+  
+  // 移除多余动画，保留简单的底部发光
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: $pixel-accent;
+    box-shadow: 0 0 6px rgba($pixel-accent, 0.5);
+  }
+  
+  box-shadow: 
+    0 1px 5px rgba($pixel-accent, 0.2),
+    inset 0 1px 0 rgba($pixel-accent, 0.1);
+
+  .menu-item {
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    text-decoration: none !important;
+    // 使用亮白色确保最大对比度，加强优先级
+    color: #FFFFFF !important;
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s ease;
+    border-radius: 3px;
+    
+    // 简洁的文字样式，移除发光效果
+    text-shadow: none;
+
+    &:hover {
+      border: 1px solid $pixel-neon-blue;
+      background: 
+        linear-gradient(135deg, 
+          rgba($pixel-neon-blue, 0.2) 0%, 
+          rgba($pixel-dark-blue, 0.3) 100%
+        );
+      // 悬停时使用亮青色
+      color: $pixel-accent !important;
+      box-shadow: 
+        0 0 10px rgba($pixel-neon-blue, 0.4),
+        inset 0 0 5px rgba($pixel-neon-blue, 0.1);
+      text-shadow: none; // 移除发光效果
+    }
+
+    &:active {
+      border: 1px solid $pixel-accent;
+      background: 
+        linear-gradient(135deg, 
+          rgba($pixel-accent, 0.3) 0%, 
+          rgba($pixel-dark-blue, 0.4) 100%
+        );
+      color: #FFFF00 !important; // 亮黄色
+      box-shadow: 
+        0 0 8px rgba($pixel-accent, 0.5),
+        inset 0 0 3px rgba($pixel-accent, 0.2);
+    }
+
+    // 访问过的链接样式
+    &:visited {
+      color: #FFFFFF !important; // 确保访问过的链接也是白色
+    }
+    
+    // 确保链接状态都是白色
+    &:link {
+      color: #FFFFFF !important;
+    }
+  }
+}
+
+// 纯赛博朋克工具栏 - 优化版
+.browser-toolbar {
+  height: 40px;
+  background: 
+    // 简化背景，确保对比度
+    linear-gradient(135deg, 
+      rgba($pixel-black, 0.95) 0%, 
+      rgba($pixel-dark-blue, 0.8) 50%,
+      rgba($pixel-black, 0.95) 100%
+    );
+  border-bottom: 2px solid $pixel-neon-purple;
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  gap: 12px;
+  font-family: $pixel-font;
+  font-size: 12px;
+  position: relative;
+  
+  // 移除多余动画，保留简单的底部发光
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: $pixel-neon-purple;
+    box-shadow: 0 0 8px rgba($pixel-neon-purple, 0.6);
+  }
+  
+  box-shadow: 
+    0 2px 10px rgba($pixel-neon-purple, 0.3),
+    inset 0 1px 0 rgba($pixel-neon-purple, 0.2);
+
+  .toolbar-buttons {
+    display: flex;
+    gap: 4px;
+
+    .toolbar-btn {
+      width: 32px;
+      height: 28px;
+      background: 
+        // 简化按钮背景
+        linear-gradient(135deg, 
+          rgba($pixel-dark-blue, 0.8) 0%, 
+          rgba($pixel-black, 0.9) 100%
+        );
+      border: 1px solid $pixel-accent;
+      border-radius: 4px;
+      font-size: 14px; // 增大字体
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s ease;
+      // 使用纯白色确保最大可见性
+      color: #FFFFFF !important;
+      font-weight: bold; // 加粗字体
+      
+      // 简化发光效果
+      box-shadow: 
+        0 0 5px rgba($pixel-accent, 0.3),
+        inset 0 1px 0 rgba($pixel-accent, 0.1);
+      
+      // 简洁的文字样式，移除发光效果
+      text-shadow: none;
+
+      &:hover {
+        border: 1px solid $pixel-neon-blue;
+        background: 
+          linear-gradient(135deg, 
+            rgba($pixel-neon-blue, 0.3) 0%, 
+            rgba($pixel-dark-blue, 0.8) 100%
+          );
+        // 悬停时亮青色
+        color: $pixel-accent;
+        box-shadow: 
+          0 0 10px rgba($pixel-neon-blue, 0.5),
+          inset 0 0 5px rgba($pixel-neon-blue, 0.1);
+        text-shadow: none; // 移除发光效果
+      }
+
+      &:active {
+        border: 1px solid $pixel-accent;
+        background: 
+          linear-gradient(135deg, 
+            rgba($pixel-accent, 0.4) 0%, 
+            rgba($pixel-black, 0.9) 100%
+          );
+        color: #FFFF00; // 亮黄色
+        box-shadow: 
+          0 0 8px rgba($pixel-accent, 0.6),
+          inset 0 0 4px rgba($pixel-accent, 0.2);
+        text-shadow: none; // 移除发光效果
+      }
+    }
+  }
+
+  .address-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    .address-label {
+      font-size: 11px;
+      color: #FFFFFF; // 改为亮白色
+      text-shadow: 
+        0 0 3px rgba(255, 255, 255, 1),
+        2px 2px 4px rgba(0, 0, 0, 1); // 强化阴影
+      font-weight: normal;
+    }
+
+    .address-input {
+      flex: 1;
+      height: 18px;
+      border: 2px inset #c0c0c0; // 加粗边框更像素化
+      background: 
+        // 微妙的像素点纹理
+        radial-gradient(circle at 1px 1px, rgba(240,240,240,0.3) 1px, transparent 1px),
+        #ffffff;
+      background-size: 3px 3px, 100% 100%;
+      font-family: 'MS Sans Serif', sans-serif;
+      font-size: 11px;
+      padding: 1px 4px;
+      box-shadow: 
+        inset 1px 1px 2px rgba(0,0,0,0.2),
+        inset -1px -1px 1px rgba(255,255,255,0.8);
+      
+      &:focus {
+        outline: none;
+        background: 
+          radial-gradient(circle at 1px 1px, rgba(255,255,240,0.5) 1px, transparent 1px),
+          #fffff0;
+        background-size: 3px 3px, 100% 100%;
+      }
+    }
+  }
+}
+
+// 浏览器内容区域 - 纯赛博朋克像素风格
+.browser-content {
+  flex: 1;
+  overflow: auto;
+  background: 
+    // 纯色彩光晕效果 - 无纹理线条
+    radial-gradient(
+      circle at 25% 75%,
+      rgba($pixel-neon-blue, 0.2) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 75% 25%,
+      rgba($pixel-neon-purple, 0.2) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba($pixel-accent, 0.1) 0%,
+      transparent 60%
+    ),
+    // 深层基础背景
+    linear-gradient(
+      135deg,
+      rgba($pixel-cyberpunk-bg, 0.95) 0%,
+      rgba($pixel-dark-blue, 0.9) 30%,
+      rgba($pixel-black, 0.98) 70%,
+      $pixel-black 100%
+    );
+  border: 2px inset #c0c0c0;
+  position: relative;
+  margin: 2px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  min-height: 0;
+  
+  // 增强像素化渲染
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  
+  // 强化赛博朋克内阴影
+  box-shadow: 
+    inset 2px 2px 4px rgba(0,0,0,0.5),
+    inset -1px -1px 2px rgba(255,255,255,0.1),
+    inset 0 0 50px rgba($pixel-accent, 0.1),
+    inset 0 0 100px rgba($pixel-neon-blue, 0.1),
+    inset 0 0 150px rgba($pixel-cyberpunk-bg, 0.7);
+    
+  // 强化数据流动画
+  animation: data-flow 15s infinite linear;
+}
+
+@keyframes glow-pulse {
+  0% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes magical-drift {
+  0% {
+    background-position: 0 0, 40px 20px, 80px 60px, 120px 40px, 160px 80px, 200px 100px, 240px 120px, 280px 140px,
+      0 0, 200px 100px, 400px 200px, 300px 150px, 0 0;
+  }
+
+  25% {
+    background-position: -35px 10px, 25px 35px, 65px 75px, 105px 55px, 145px 95px, 185px 115px, 225px 135px, 265px 155px,
+      -50px 25px, 150px 125px, 350px 225px, 250px 175px, 0 0;
+  }
+
+  50% {
+    background-position: -70px 20px, 10px 50px, 50px 90px, 90px 70px, 130px 110px, 170px 130px, 210px 150px, 250px 170px,
+      -100px 50px, 100px 150px, 300px 250px, 200px 200px, 0 0;
+  }
+
+  75% {
+    background-position: -105px 30px, -5px 65px, 35px 105px, 75px 85px, 115px 125px, 155px 145px, 195px 165px, 235px 185px,
+      -150px 75px, 50px 175px, 250px 275px, 150px 225px, 0 0;
+  }
+
+  100% {
+    background-position: -140px 40px, -20px 80px, 20px 120px, 60px 100px, 100px 140px, 140px 160px, 180px 180px, 220px 200px,
+      -200px 100px, 0 200px, 200px 300px, 100px 250px, 0 0;
+  }
+}
+
+@keyframes luminous-pulse {
+  0% {
+    opacity: 0.8;
+    filter: brightness(1) hue-rotate(0deg);
+  }
+
+  25% {
+    opacity: 0.9;
+    filter: brightness(1.1) hue-rotate(5deg);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.2) hue-rotate(10deg);
+  }
+
+  75% {
+    opacity: 0.95;
+    filter: brightness(1.1) hue-rotate(5deg);
+  }
+
+  100% {
+    opacity: 0.85;
+    filter: brightness(1) hue-rotate(0deg);
+  }
+}
+
+@keyframes stardust-dance {
+  0% {
+    background-position: 0 0, 85px 85px, 50px 140px, 130px 60px, 170px 180px;
+    opacity: 0.4;
+  }
+
+  25% {
+    background-position: -62px 20px, 23px 105px, -12px 160px, 68px 80px, 108px 200px;
+    opacity: 0.5;
+  }
+
+  50% {
+    background-position: -125px 40px, -39px 125px, -75px 180px, 5px 100px, 45px 220px;
+    opacity: 0.3;
+  }
+
+  75% {
+    background-position: -187px 60px, -101px 145px, -137px 200px, -57px 120px, -17px 240px;
+    opacity: 0.6;
+  }
+
+  100% {
+    background-position: -250px 80px, -165px 165px, -200px 220px, -120px 140px, -80px 260px;
+    opacity: 0.4;
+  }
+}
+
+@keyframes gentle-flow {
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+    opacity: 0.6;
+  }
+
+  33% {
+    background-position: -40px 40px, 50px -50px, -60px 60px;
+    opacity: 0.4;
+  }
+
+  66% {
+    background-position: -80px 80px, 100px -100px, -120px 120px;
+    opacity: 0.7;
+  }
+
+  100% {
+    background-position: -120px 120px, 150px -150px, -180px 180px;
+    opacity: 0.5;
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    background-position: 0 0, 75px 75px, 40px 120px;
+    opacity: 0.2;
+  }
+
+  50% {
+    background-position: 100px 50px, 175px 175px, 140px 220px;
+    opacity: 0.4;
+  }
+
+  100% {
+    background-position: 200px 100px, 275px 275px, 240px 320px;
+    opacity: 0.2;
+  }
+}
+
+@keyframes light-sweep {
+  0% {
+    background-position: 0 0, 0 0;
+    opacity: 0.3;
+  }
+
+  50% {
+    background-position: 30px 30px, 40px 40px;
+    opacity: 0.5;
+  }
+
+  100% {
+    background-position: 60px 60px, 80px 80px;
+    opacity: 0.3;
+  }
+}
+
+@keyframes pixel-glow {
+  0% {
+    filter: drop-shadow(0 0 5px currentColor) brightness(1);
+    transform: scale(1);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 15px currentColor) brightness(1.2);
+    transform: scale(1.1);
+  }
+
+  100% {
+    filter: drop-shadow(0 0 5px currentColor) brightness(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes cosmic-drift {
+  0% {
+    background-position: 0 0, 30px 20px, 60px 40px, 90px 60px, 120px 80px, 150px 100px, 0 0, 100px 50px, 0 0;
+  }
+
+  25% {
+    background-position: -30px 10px, 0px 30px, 30px 50px, 60px 70px, 90px 90px, 120px 110px, -75px 25px, 25px 75px, 0 0;
+  }
+
+  50% {
+    background-position: -60px 20px, -30px 40px, 0px 60px, 30px 80px, 60px 100px, 90px 120px, -150px 50px, -50px 100px, 0 0;
+  }
+
+  75% {
+    background-position: -90px 30px, -60px 50px, -30px 70px, 0px 90px, 30px 110px, 60px 130px, -225px 75px, -125px 125px, 0 0;
+  }
+
+  100% {
+    background-position: -120px 40px, -90px 60px, -60px 80px, -30px 100px, 0px 120px, 30px 140px, -300px 100px, -200px 150px, 0 0;
+  }
+}
+
+@keyframes sparkle-dance {
+  0% {
+    background-position: 0 0, 70px 80px, 90px 30px;
+    opacity: 0.7;
+  }
+
+  33% {
+    background-position: -60px 30px, 10px 110px, 30px 60px;
+    opacity: 0.9;
+  }
+
+  66% {
+    background-position: -120px 60px, -50px 140px, -30px 90px;
+    opacity: 0.5;
+  }
+
+  100% {
+    background-position: -180px 90px, -110px 170px, -90px 120px;
+    opacity: 0.8;
+  }
+}
+
+@keyframes ambient-glow {
+  0% {
+    box-shadow:
+      inset 0 0 120px rgba($pixel-neon-blue, 0.08),
+      inset 0 0 240px rgba($pixel-cyberpunk-bg, 0.25),
+      inset 0 0 60px rgba($pixel-neon-purple, 0.05);
+  }
+
+  50% {
+    box-shadow:
+      inset 0 0 140px rgba($pixel-neon-blue, 0.12),
+      inset 0 0 280px rgba($pixel-cyberpunk-bg, 0.35),
+      inset 0 0 80px rgba($pixel-neon-purple, 0.08);
+  }
+
+  100% {
+    box-shadow:
+      inset 0 0 100px rgba($pixel-neon-blue, 0.06),
+      inset 0 0 200px rgba($pixel-cyberpunk-bg, 0.2),
+      inset 0 0 40px rgba($pixel-neon-purple, 0.03);
+  }
+}
+
+.pixel-content {
+  position: relative;
+  width: 100%;
+  height: 100%; // 适配浏览器窗口高度
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  box-sizing: border-box;
+  min-height: 0; // 确保能够缩小
+
+  // 主要内容区域 - 上部分：左右等高，下部分：Start按钮
+  .main-content {
+    display: grid;
+    grid-template-columns: auto 1fr; // 左侧头像+链接，右侧姓名+信息
+    grid-template-rows: 1fr auto;    // 第一行等高内容，第二行Start按钮
+    grid-template-areas: 
+      "left-panel right-panel"
+      "start-section start-section"; // Start按钮跨两列
+    gap: 1.5em;
+    width: 100%;
+    align-items: stretch; // 第一行等高
+    flex: 1;
+    min-height: 0;
+  }
+}
+
+// 左侧面板（头像+链接容器）
+.left-panel {
+  grid-area: left-panel; // 使用Grid区域名
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; // 均匀分布空间
+  gap: 1.5em;
+  padding: 1em 0.5em; // 减少内边距以适应框架
+  box-sizing: border-box;
+  // 让Grid系统自动控制高度
+}
+
+.pixel-avatar {
+  position: relative;
+  align-self: center;
+  filter: drop-shadow(0 0 20px $pixel-accent);
+
+  .pixel-frame {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 3px solid $pixel-accent;
+    border-radius: 0;
+    box-shadow:
+      0 0 20px $pixel-accent,
+      0 0 60px rgba($pixel-accent, 0.5),
+      inset 0 0 20px rgba($pixel-accent, 0.3);
+    animation: frame-glow 2s ease-in-out infinite alternate;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background: $pixel-yellow;
+      box-shadow: 0 0 20px $pixel-yellow;
+    }
+
+    // 赛博朋克角落装饰
+    &::before {
+      top: -3px;
+      left: -3px;
+      width: 12px;
+      height: 12px;
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+
+    &::after {
+      bottom: -3px;
+      right: -3px;
+      width: 12px;
+      height: 12px;
+      clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+  .pixelated-img {
+    width: 140px; // 减小头像尺寸以适应框架
+    height: 140px;
+    border-radius: 0;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    border: 2px solid $pixel-neon-purple;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba($pixel-neon-purple, 0.5);
+
+    &:hover {
+      filter: contrast(1.3) saturate(1.5) hue-rotate(10deg);
+      transform: scale(1.05);
+      box-shadow: 0 0 25px $pixel-accent;
+    }
+  }
+}
+
+@keyframes frame-glow {
+  0% {
+    box-shadow: 
+      0 0 30px $pixel-accent, 
+      0 0 60px rgba($pixel-accent, 0.5),
+      inset 0 0 30px rgba($pixel-accent, 0.3);
+  }
+
+  100% {
+    box-shadow: 
+      0 0 50px $pixel-accent, 
+      0 0 100px rgba($pixel-accent, 0.8),
+      inset 0 0 50px rgba($pixel-accent, 0.5);
+  }
+}
+
+.pixel-text-box {
+  grid-area: right-panel; // 使用Grid区域名
+  background: linear-gradient(145deg, rgba($pixel-cyberpunk-bg, 0.9), rgba($pixel-dark-blue, 0.8));
+  border: 2px solid $pixel-neon-blue;
+  padding: 1.2em; // 进一步优化内边距
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 
+    0 0 30px rgba($pixel-neon-blue, 0.5),
+    inset 0 0 20px rgba($pixel-neon-blue, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // 垂直居中内容
+  overflow: hidden; // 防止内容溢出
+  
+  // 赛博朋克边角效果
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: $pixel-yellow;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 100%);
+    box-shadow: 0 0 15px $pixel-yellow;
+  }
+
+  &::before {
+    top: -2px;
+    left: -2px;
+  }
+
+  &::after {
+    bottom: -2px;
+    right: -2px;
+    transform: rotate(180deg);
+  }
+}
+
+.pixel-name {
+  margin-bottom: 1.5em;
+
+  .pixel-text-en {
+    display: block;
+    font-family: $pixel-font;
+    font-size: 2em; // 增大字体
+    color: $pixel-accent;
+    letter-spacing: 3px;
+    margin-bottom: 0.3em;
+    text-shadow:
+      2px 2px 0px $pixel-neon-blue,
+      0 0 20px $pixel-accent,
+      0 0 4cap $pixel-accent,
+      0 0 90px rgba($pixel-accent, 0.5);
+    animation: text-glow 3s ease-in-out infinite alternate;
+  }
+
+  .pixel-text-cn {
+    display: block;
+    font-size: 1.4em; // 稍微增大中文字体
+    color: $pixel-highlight;
+    font-weight: normal;
+    text-shadow: 
+      0 0 20px $pixel-highlight,
+      0 0 40px rgba($pixel-highlight, 0.5);
+  }
+}
+
+@keyframes text-glow {
+  0% {
+    text-shadow:
+      2px 2px 0px $pixel-neon-blue,
+      0 0 30px $pixel-accent,
+      0 0 60px $pixel-accent,
+      0 0 90px rgba($pixel-accent, 0.5);
+  }
+
+  100% {
+    text-shadow:
+      2px 2px 0px $pixel-neon-blue,
+      0 0 50px $pixel-accent,
+      0 0 100px $pixel-accent,
+      0 0 150px rgba($pixel-accent, 0.8);
+  }
+}
+
+.pixel-title {
+  margin-bottom: 1em; // 减少下边距
+
+  .pixel-text {
+    font-family: $pixel-font;
+    font-size: 0.9em;
+    color: $pixel-neon-purple;
+    letter-spacing: 2px;
+    text-shadow: 
+      0 0 20px $pixel-neon-purple,
+      0 0 40px rgba($pixel-neon-purple, 0.5);
+  }
+}
+
+.pixel-research {
+  margin-bottom: 1em; // 减少下边距
+
+  .pixel-line {
+    font-family: $pixel-font;
+    font-size: 0.75em;
+    color: $pixel-white;
+    margin-bottom: 0.8em;
+    letter-spacing: 1px;
+    text-shadow: 
+      0 0 15px rgba($pixel-white, 0.8),
+      0 0 30px rgba($pixel-accent, 0.3);
+
+    &::before {
+      content: "▶ ";
+      color: $pixel-accent;
+      text-shadow: 
+        0 0 15px $pixel-accent,
+        0 0 30px rgba($pixel-accent, 0.5);
+      animation: bullet-pulse 2s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes bullet-pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.pixel-links {
+  display: flex;
+  flex-direction: row; // 水平排列
+  gap: 0.5em;
+  justify-content: center; // 居中对齐
+  align-items: center;
+  flex-wrap: wrap; // 允许换行
+}
+
+.pixel-button {
+  background: linear-gradient(145deg, $pixel-dark-blue, $pixel-cyberpunk-bg);
+  border: 2px solid $pixel-neon-blue;
+  color: $pixel-white;
+  padding: 0.6em 0.8em; // 减小内边距
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 0 8px rgba($pixel-neon-blue, 0.2); // 减小光晕
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 3.5em; // 减小最小宽度
+
+  // 像素风格化边框效果
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, $pixel-neon-blue, $pixel-neon-purple, $pixel-yellow);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .pixel-icon {
+    font-family: $pixel-font; // 使用像素字体
+    font-size: 1.2em;
+    display: block;
+    filter: drop-shadow(0 0 3px currentColor); // 减小阴影
+    margin-bottom: 0.2em;
+    letter-spacing: -1px; // 紧凑间距使其更像素化
+    font-weight: bold;
+    text-shadow: 1px 1px 0px $pixel-neon-blue;
+    transition: all 0.3s ease; // 添加过渡效果
+  }
+
+  .pixel-label {
+    font-family: $pixel-font;
+    font-size: 0.45em; // 稍微减小字体
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-shadow: 0 0 1px currentColor; // 进一步减小发光
+  }
+
+  &:hover {
+    background: linear-gradient(145deg, lighten($pixel-dark-blue, 10%), lighten($pixel-cyberpunk-bg, 5%)); // 更温和的颜色变化
+    border-color: lighten($pixel-neon-blue, 15%); // 更温和的边框颜色
+    color: $pixel-white;
+    transform: translate(1px, 1px); // 减小移动距离
+    box-shadow:
+      -1px -1px 0px rgba($pixel-yellow, 0.6), // 减小阴影强度
+      0 0 12px rgba($pixel-neon-blue, 0.4); // 减小发光强度
+
+    &::before {
+      opacity: 0.15; // 减小背景光晕
+    }
+
+    .pixel-icon {
+      filter: drop-shadow(0 0 5px currentColor); // 轻微增加阴影
+      text-shadow: 1px 1px 0px rgba($pixel-yellow, 0.8); // 更温和的文字阴影
+    }
+  }
+
+  &:active {
+    transform: translate(0.5px, 0.5px); // 减小按下效果
+    box-shadow:
+      -0.5px -0.5px 0px rgba($pixel-yellow, 0.4),
+      0 0 8px rgba($pixel-neon-blue, 0.3);
+  }
+}
+
+.pixel-start-section {
+  grid-area: start-section; // 使用Grid区域名
+  text-align: center;
+  align-self: center; // 水平居中
+  padding: 1em 0; // 添加适当的内边距
+
+  .pixel-start-button {
+    font-family: $pixel-font;
+    font-size: 1.1em; // 稍微减小字体
+    color: $pixel-cyberpunk-bg;
+    background: linear-gradient(145deg, $pixel-yellow, darken($pixel-yellow, 10%));
+    border: 3px solid $pixel-neon-blue;
+    padding: 0.8em 2em; // 减小内边距
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s ease;
+    letter-spacing: 2px; // 减小字母间距
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow:
+      0 0 20px rgba($pixel-yellow, 0.6),
+      inset 0 0 20px rgba($pixel-white, 0.3);
+
+    // 游戏按钮的边角装饰
+    &::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      width: 8px;
+      height: 8px;
+      background: $pixel-neon-purple;
+      box-shadow: 0 0 10px $pixel-neon-purple;
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      right: -3px;
+      width: 8px;
+      height: 8px;
+      background: $pixel-neon-purple;
+      box-shadow: 0 0 10px $pixel-neon-purple;
+      clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    }
+
+    &:hover {
+      background: linear-gradient(145deg, $pixel-white, $pixel-yellow);
+      border-color: $pixel-neon-purple;
+      color: $pixel-dark-blue;
+      transform: scale(1.05);
+      box-shadow:
+        0 0 30px $pixel-yellow,
+        0 0 50px rgba($pixel-yellow, 0.4),
+        inset 0 0 30px rgba($pixel-white, 0.5);
+    }
+
+    &:active {
+      transform: scale(0.98);
+      box-shadow:
+        0 0 15px $pixel-yellow,
+        inset 0 0 25px rgba($pixel-neon-blue, 0.3);
+    }
+  }
+
+  .pixel-instruction {
+    font-family: $pixel-font;
+    font-size: 0.6em;
+    color: $pixel-accent;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px $pixel-accent;
+    margin-top: 1em;
+    opacity: 0.8;
+  }
+}
+
+@keyframes arrow-glow {
+  0% {
+    text-shadow: 0 0 20px $pixel-yellow;
+    color: $pixel-yellow;
+  }
+
+  100% {
+    text-shadow:
+      0 0 30px $pixel-yellow,
+      0 0 50px $pixel-yellow;
+    color: $pixel-white;
+  }
+}
+
+// 闪烁效果 - 赛博朋克风格
+.blink {
+  animation: cyberpunk-blink 1.5s infinite;
+}
+
+@keyframes cyberpunk-blink {
+
+  0%,
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 10px currentColor;
+  }
+
+  51%,
+  100% {
+    opacity: 0.2;
+    text-shadow: 0 0 5px currentColor;
+  }
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .browser-window {
+    width: 95%;
+    height: 90%;
+  }
+
+  .browser-header {
+    height: 20px;
+    padding: 0 2px;
+
+    .browser-title {
+      font-size: 9px;
+      padding: 0 5px;
+    }
+
+    .control-dot {
+      width: 14px;
+      height: 12px;
+      font-size: 7px;
+      line-height: 10px;
+    }
+  }
+
+  .browser-menubar {
+    height: 16px;
+    font-size: 9px;
+
+    .menu-item {
+      padding: 1px 4px;
+    }
+  }
+
+  .browser-toolbar {
+    height: 24px;
+    font-size: 9px;
+
+    .toolbar-btn {
+      width: 20px;
+      height: 18px;
+      font-size: 8px;
+    }
+
+    .address-input {
+      height: 14px;
+      font-size: 9px;
+    }
+  }
+
+  .pixel-content {
+    padding: 1em;
+
+    .main-content {
+      grid-template-columns: 1fr; // 单列布局
+      grid-template-rows: auto auto; // 两行：左侧面板、文本框
+      gap: 1em;
+    }
+  }
+
+  .left-panel {
+    grid-column: 1;
+    grid-row: 1;
+    height: auto; // 移动端自适应高度
+    padding: 0.5em;
+    text-align: center;
+
+    .pixel-avatar .pixelated-img {
+      width: 120px; // 移动端减小头像
+      height: 120px;
+    }
+  }
+
+  .pixel-links {
+    justify-content: center; // 移动端居中对齐
+    gap: 0.8em;
+
+    .pixel-button {
+      padding: 0.5em 0.6em;
+      min-width: 3em;
+
+      .pixel-icon {
+        font-size: 1em;
+      }
+
+      .pixel-label {
+        font-size: 0.4em;
+      }
+    }
+  }
+
+  .pixel-text-box {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 1em;
+    text-align: center; // 移动端居中对齐
+    height: auto; // 移动端自适应高度
+    justify-content: flex-start; // 移动端从顶部开始
+  }
+
+  .pixel-name .pixel-text-en {
+    font-size: 1.4em; // 移动端减小字体
+    letter-spacing: 1px;
+  }
+
+  .pixel-name .pixel-text-cn {
+    font-size: 1.1em;
+  }
+
+  .pixel-title .pixel-text,
+  .pixel-research .pixel-line {
+    font-size: 0.6em;
+  }
+
+  .pixel-start-section {
+    margin-top: 1em;
+
+    .pixel-start-button {
+      font-size: 1em;
+      padding: 0.7em 1.8em;
+      letter-spacing: 2px;
+    }
+
+    .pixel-instruction {
+      font-size: 0.5em;
+    }
+  }
+}
+
+.page__related-title {
+  margin-bottom: 10px;
+  font-size: $type-size-6;
+  text-transform: uppercase;
+}
+
+// ========================================================================== //
+//                      赛博朋克动画效果
+// ========================================================================== //
+
+// 背景大气效果动画
+@keyframes cyberpunk-atmosphere {
+  0% {
+    background-position: 0% 0%, 0px 0px, 0px 0px, 30% 20%;
+  }
+  25% {
+    background-position: 25% 25%, -50px 25px, 25px -50px, 40% 30%;
+  }
+  50% {
+    background-position: 50% 50%, -100px 50px, 50px -100px, 50% 40%;
+  }
+  75% {
+    background-position: 75% 75%, -150px 75px, 75px -150px, 60% 50%;
+  }
+  100% {
+    background-position: 100% 100%, -200px 100px, 100px -200px, 70% 60%;
+  }
+}
+
+// 浏览器窗口发光动画
+@keyframes browser-glow {
+  0% {
+    box-shadow:
+      3px 3px 0px #808080,
+      6px 6px 0px #404040,
+      9px 9px 0px #202020,
+      12px 12px 0px #101010,
+      0 0 50px rgba($pixel-neon-blue, 0.4),
+      0 0 100px rgba($pixel-accent, 0.2),
+      0 0 150px rgba($pixel-highlight, 0.1),
+      inset 1px 1px 0px #ffffff,
+      inset 0 0 30px rgba($pixel-accent, 0.05);
+  }
+  50% {
+    box-shadow:
+      3px 3px 0px #808080,
+      6px 6px 0px #404040,
+      9px 9px 0px #202020,
+      12px 12px 0px #101010,
+      0 0 80px rgba($pixel-neon-blue, 0.8),
+      0 0 160px rgba($pixel-accent, 0.6),
+      0 0 240px rgba($pixel-highlight, 0.4),
+      inset 1px 1px 0px #ffffff,
+      inset 0 0 50px rgba($pixel-accent, 0.15);
+  }
+  100% {
+    box-shadow:
+      3px 3px 0px #808080,
+      6px 6px 0px #404040,
+      9px 9px 0px #202020,
+      12px 12px 0px #101010,
+      0 0 50px rgba($pixel-neon-blue, 0.4),
+      0 0 100px rgba($pixel-accent, 0.2),
+      0 0 150px rgba($pixel-highlight, 0.1),
+      inset 1px 1px 0px #ffffff,
+      inset 0 0 30px rgba($pixel-accent, 0.05);
+  }
+}
+
+// 数据流动画
+@keyframes data-flow {
+  0% {
+    background-position: 0% 0%, 0% 0%, 20% 80%, 80% 20%, 0% 0%;
+  }
+  25% {
+    background-position: 25% 25%, -25% 25%, 30% 70%, 70% 30%, 25% 25%;
+  }
+  50% {
+    background-position: 50% 50%, -50% 50%, 40% 60%, 60% 40%, 50% 50%;
+  }
+  75% {
+    background-position: 75% 75%, -75% 75%, 50% 50%, 50% 50%, 75% 75%;
+  }
+  100% {
+    background-position: 100% 100%, -100% 100%, 60% 40%, 40% 60%, 100% 100%;
+  }
+}
+
+// 赛博朋克边框动画
+@keyframes cyberpunk-border {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+// 赛博朋克脉冲
+@keyframes cyberpunk-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 40px rgba($pixel-neon-blue, 0.6),
+      0 0 80px rgba($pixel-accent, 0.4),
+      0 0 120px rgba($pixel-neon-purple, 0.3),
+      inset 0 0 50px rgba($pixel-neon-blue, 0.1);
+  }
+  50% {
+    box-shadow:
+      0 0 60px rgba($pixel-neon-blue, 0.8),
+      0 0 120px rgba($pixel-accent, 0.6),
+      0 0 180px rgba($pixel-neon-purple, 0.4),
+      inset 0 0 80px rgba($pixel-neon-blue, 0.2);
+  }
+}
+
+// 赛博朋克扫描
+@keyframes cyberpunk-scan {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+// 标题栏动画
+@keyframes cyberpunk-header {
+  0%, 100% {
+    background-position: 0% 50%, 0% 0%;
+  }
+  50% {
+    background-position: 100% 50%, 0% 0%;
+  }
+}
+
+// 菜单流动
+@keyframes cyberpunk-flow {
+  0%, 100% {
+    background-position: 0% 50%, 0% 0%;
+  }
+  50% {
+    background-position: 100% 50%, 0% 0%;
+  }
+}
+
+// 工具栏动画
+@keyframes cyberpunk-toolbar {
+  0%, 100% {
+    background-position: 0% 50%, 0% 0%;
+  }
+  33% {
+    background-position: 50% 50%, 0% 0%;
+  }
+  66% {
+    background-position: 100% 50%, 0% 0%;
+  }
+}
+
+// 数据流
+@keyframes data-stream {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+// 扫描线动画
+@keyframes scan-line {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+// 脉冲发光动画
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scaleY(1.2);
+  }
+}
+
+// 数据脉冲动画
+@keyframes data-pulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scaleX(1);
+  }
+  33% {
+    opacity: 0.6;
+    transform: scaleX(1.1);
+  }
+  66% {
+    opacity: 0.4;
+    transform: scaleX(0.9);
+  }
+}
+
+// 新增数据库终端动画
+@keyframes terminal-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 30px rgba($pixel-neon-blue, 0.6),
+      0 0 60px rgba($pixel-accent, 0.4),
+      0 0 90px rgba($pixel-neon-purple, 0.3),
+      inset 0 0 30px rgba($pixel-neon-blue, 0.1);
+  }
+  50% {
+    box-shadow:
+      0 0 40px rgba($pixel-neon-blue, 0.8),
+      0 0 80px rgba($pixel-accent, 0.6),
+      0 0 120px rgba($pixel-neon-purple, 0.4),
+      inset 0 0 40px rgba($pixel-neon-blue, 0.15);
+  }
+}
+
+@keyframes data-stream {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+@keyframes data-flow-line {
+  0%, 100% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes status-blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes time-flicker {
+  0%, 90%, 100% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes panel-glow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes scan-line {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes vertical-scan {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes link-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes status-pulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+  }
+}
+
+@keyframes access-flash {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

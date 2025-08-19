@@ -1,7 +1,3 @@
----
-layout: compress
----
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -10,49 +6,215 @@ layout: compress
   </head>
 
   <body>
-
     {% include browser-upgrade.html %}
-    {% include masthead.html %}
-    <div id="main" role="main">    
-      <article class="page-about" itemscope itemtype="http://schema.org/CreativeWork">
-        {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-        <div class="page__inner-wrap">
-          <section class="page__content" itemprop="text">
-          <!-- <span class='anchor' id='about-me'></span> -->
-          <div class="about-me">
-            <img src="{{ site.baseurl }}/images/pics/my-pure-big.jpg">
-            <h1>Junming Liu</h1>
-            <h2>刘君茗</h2>
-            <div class="links">
-              <a href="mailto:jmliu@zju.edu.cn"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i></a>
-              <a href="https://scholar.google.com/citations?user=VWst5KEAAAAJ"><i class="fas fa-fw fa-graduation-cap"></i></a>
-              <a href="https://github.com/Jamrot"><i class="fab fa-fw fa-github" aria-hidden="true"></i></a>
-            </div>
-
-            <p>Master's student with research interests in <br><strong>Large Language Models for Software Security</strong>, <br><strong>Software Engineering</strong>, and <br><strong>Program Analysis</strong>.</p>
-
-            <h3><span style="color: rgb(133, 0, 0);">Actively seeking PhD opportunities!</span></h3>
-            <!-- <p>Email: jmliu|@|zju.edu.cn</p> -->
+    
+    <!-- 正常显示导航栏 -->
+    <div id="masthead-wrapper">
+      {% include masthead.html %}
+    </div>
+    
+    <!-- 像素风 About-me 全屏部分 -->
+    <div id="pixel-about-me" class="pixel-about-container">
+      
+      <!-- 赛博朋克数据库终端 -->
+      <div class="cyber-terminal">
+        <!-- 终端标题栏 -->
+        <div class="terminal-header">
+          <div class="terminal-status">
+            <span class="status-indicator online"></span>
+            <span class="status-text">DATABASE ONLINE</span>
           </div>
-          </section>
+          <div class="terminal-title">PERSONNEL DATABASE - PROFILE ACCESS</div>
+          <div class="terminal-time">
+            <span id="cyber-time">23:59:47</span>
+          </div>
         </div>
-      </article>
+        
+        <!-- 数据库导航栏 -->
+        <div class="database-nav">
+          <div class="nav-section">
+            <!-- <span class="nav-label">CATEGORIES</span> -->
+            <div class="nav-items">
+              <a href="{{ site.baseurl }}/#-about-me" class="nav-item">ABOUT</a>
+              <a href="{{ site.baseurl }}/#-publications" class="nav-item">PUBLICATION</a>
+              <a href="{{ site.baseurl }}/#-service" class="nav-item">SERVICE</a>
+              <a href="{{ site.baseurl }}/posts/" class="nav-item">POSTS</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 数据库内容面板 -->
+        <div class="database-content">
+          <div class="data-panels">
+            <!-- 左侧数据面板 -->
+            <div class="data-panel left-panel">
+              <!-- <div class="panel-header">
+                <span class="panel-title">SUBJECT DATA</span>
+                <span class="panel-id">[ID: 001]</span>
+              </div> -->
+              
+              <div class="data-entry">
+                <div class="entry-avatar">
+                  <div class="avatar-frame"></div>
+                  <img src="{{ site.baseurl }}/images/pics/my-pure-big.jpg" class="subject-image" alt="Junming Liu">
+                  <div class="scan-line"></div>
+                </div>
+                
+                <!-- 数据连接点 -->
+                <div class="data-connections">
+                  <a href="mailto:jmliu@zju.edu.cn" class="data-link">
+                    <!-- <span class="link-icon">⟨</span> -->
+                    <span class="link-text">EMAIL</span>
+                  </a>
+                  <a href="https://scholar.google.com/citations?user=VWst5KEAAAAJ" class="data-link">
+                    <!-- <span class="link-icon">⟨</span> -->
+                    <span class="link-text">SCHOLAR</span>
+                  </a>
+                  <a href="https://github.com/Jamrot" class="data-link">
+                    <!-- <span class="link-icon">⟨</span> -->
+                    <span class="link-text">GITHUB</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 右侧信息面板 -->
+            <div class="data-panel right-panel">
+              <div class="panel-header">
+                <span class="panel-title">IDENTIFICATION</span>
+                <span class="panel-status">VERIFIED</span>
+              </div>
+              
+              <div class="data-fields">
+                <div class="data-field">
+                  <span class="field-label">NAME.EN:</span>
+                  <span class="field-value highlight">JUNMING LIU</span>
+                </div>
+                <div class="data-field">
+                  <span class="field-label">NAME.CN:</span>
+                  <span class="field-value chinese">刘君茗</span>
+                </div>
+                <div class="data-field">
+                  <span class="field-label">STATUS:</span>
+                  <span class="field-value">PHD STUDENT</span>
+                </div>
+                <div class="data-field">
+                  <span class="field-label">RESEARCH AREA:</span>
+                </div>
+                <div class="research-tags">
+                  <span class="research-tag">LLM FOR SECURITY</span>
+                  <span class="research-tag">SOFTWARE ENGINEERING</span>
+                  <span class="research-tag">PROGRAM ANALYSIS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 访问控制 -->
+          <div class="access-control">
+            <div class="access-message">
+              <span class="access-icon">!!</span>
+              <span class="access-text">SYSTEM ACCESS GRANTED</span>
+            </div>
+            <a href="#" class="access-button" id="startGameButton">
+              <span class="button-text">INITIALIZE</span>
+              <span class="button-arrow">▶</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="main" role="main">
-      {% include sidebar.html %}
-    
-      <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-        {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-        <div class="page__inner-wrap">
-          <section class="page__content" itemprop="text">
-            {{ content }}
-          </section>
-        </div>
-      </article>
-    </div>
+        {% include sidebar.html %}
+        <article class="page-pub" itemscope itemtype="http://schema.org/CreativeWork">
+          {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+          <div class="page__inner-wrap">
+            <section class="page__content" itemprop="text">
+              {{ content }}
+            </section>
+          </div>
+        </article>
+      </div>
 
     {% include scripts.html %}
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 处理数据库导航栏的点击事件
+      const navItems = document.querySelectorAll('.database-nav .nav-item');
+      
+      navItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          
+          // 如果是同页面的锚点链接
+          if (href && href.includes('#')) {
+            const anchor = href.split('#')[1];
+            const targetElement = document.getElementById(anchor);
+            
+            if (targetElement) {
+              e.preventDefault(); // 阻止默认跳转
+              
+              // 先隐藏像素风页面
+              const pixelContainer = document.getElementById('pixel-about-me');
+              if (pixelContainer) {
+                pixelContainer.style.display = 'none';
+              }
+              
+              // 平滑滚动到目标位置
+              targetElement.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+              });
+              
+              // 更新URL
+              window.history.pushState({}, '', href);
+            }
+          }
+        });
+      });
+      
+      // 处理Start按钮点击
+      const startButton = document.getElementById('startGameButton');
+      if (startButton) {
+        startButton.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          // 隐藏像素风页面
+          const pixelContainer = document.getElementById('pixel-about-me');
+          if (pixelContainer) {
+            pixelContainer.style.display = 'none';
+          }
+          
+          // 滚动到about-me部分
+          const aboutSection = document.getElementById('-about-me');
+          if (aboutSection) {
+            aboutSection.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      }
+      
+      // 赛博朋克终端时间更新
+      function updateCyberTime() {
+        const now = new Date();
+        const timeString = now.toTimeString().slice(0, 8);
+        const timeElement = document.getElementById('cyber-time');
+        if (timeElement) {
+          timeElement.textContent = timeString;
+        }
+      }
+      
+      // 每秒更新时间
+      setInterval(updateCyberTime, 1000);
+      
+      // 页面加载时立即更新
+      updateCyberTime();
+    });
+    </script>
 
   </body>
 </html>

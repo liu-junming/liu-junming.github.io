@@ -4,6 +4,22 @@
 <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/images/favicon-16x16.png">
 <link rel="manifest" href="{{ site.baseurl }}/images/site.webmanifest">
 
+<!-- 像素字体 - 中英文支持 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<!-- Zpix 中文像素字体 -->
+<link href="https://cdn.jsdelivr.net/npm/zpix@3.1.8/zpix.css" rel="stylesheet">
+<!-- 或者使用本地字体文件 -->
+<style>
+@font-face {
+  font-family: 'Fusion Pixel Font';
+  src: url('{{ site.baseurl }}/assets/fonts/fusion-pixel.woff2') format('woff2'),
+       url('{{ site.baseurl }}/assets/fonts/fusion-pixel.woff') format('woff');
+  font-display: swap;
+}
+</style>
+
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="msapplication-TileImage" content="{{ site.baseurl }}/images/mstile-144x144.png?v=M44lzPylqQ">
 <meta name="msapplication-config" content="{{ site.baseurl }}/images/browserconfig.xml?v=M44lzPylqQ">

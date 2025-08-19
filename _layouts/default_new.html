@@ -1,53 +1,321 @@
 <!doctype html>
 <html lang="en" class="no-js">
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
 
-  <body>
-    {% include browser-upgrade.html %}
+<head>
+  {% include head.html %}
+  {% include head/custom.html %}
+</head>
+
+<body>
+  {% include browser-upgrade.html %}
+
+  <!-- 正常显示导航栏 -->
+  <div id="masthead-wrapper">
     {% include masthead.html %}
-    <div class="page-about_background" role="main">
-      <article class="page-about" itemscope itemtype="http://schema.org/CreativeWork">
-        {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-        <div class="page__inner-wrap">
-          <section class="page__content" itemprop="text">
-          <!-- <span class='anchor' id='about-me'></span> -->
-          <div class="about-me">
-            <img src="{{ site.baseurl }}/images/pics/my-pure-big.jpg">
-            <div class="name">
-              <div class="english">Junming Liu</div>
-              <div class="chinese">刘君茗</div>
-            </div>
-            <div class="links">
-              <a href="mailto:jmliu@zju.edu.cn"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i></a>
-              <a href="https://scholar.google.com/citations?user=VWst5KEAAAAJ"><i class="fas fa-fw fa-graduation-cap"></i></a>
-              <a href="https://github.com/Jamrot"><i class="fab fa-fw fa-github" aria-hidden="true"></i></a>
-            </div>
+  </div>
 
-            <p>Master's student with research interests in <br><strong>Large Language Models for Software Security</strong>, <br><strong>Software Engineering</strong>, and <br><strong>Program Analysis</strong>.</p>
-
-            <!-- <h3><span style="color: rgb(255, 221, 202);">Actively seeking PhD opportunities!</span></h3> -->
-            <!-- <p>Email: jmliu|@|zju.edu.cn</p> -->
-          </div>
-          </section>
-        </div>
-      </article>
-    </div>
-    <div id="main" role="main">
-        {% include sidebar.html %}
-        <article class="page-pub" itemscope itemtype="http://schema.org/CreativeWork">
-          {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-          <div class="page__inner-wrap">
-            <section class="page__content" itemprop="text">
-              {{ content }}
-            </section>
-          </div>
-        </article>
+  <!-- 像素风 About-me 全屏部分 -->
+  <div id="pixel-about-me" class="pixel-about-container">
+    <!-- 像素风标题区域 -->
+    <div class="pixel-title-section">
+      <div class="pixel-title-wrapper">
+        <h1 class="pixel-name-title">JUNMING</h1>
+        <div class="pixel-subtitle">PhD Student | MPI-SP</div>
       </div>
 
-    {% include scripts.html %}
+      <!-- 导航按钮 -->
+      <div class="pixel-nav-buttons">
+        <button href="{{ site.baseurl }}/about/#-about-me" class="pixel-nav-btn">ABOUT</button>
+        <button href="{{ site.baseurl }}/about/#-publications" class="pixel-nav-btn">PUBLICATION</button>
+        <button href="{{ site.baseurl }}/about/#-service" class="pixel-nav-btn">SERVICE</button>
+        <button href="{{ site.baseurl }}/posts/" class="pixel-nav-btn">POSTS</button>
+      </div>
 
-  </body>
+      <!-- 开始按钮 -->
+      <div class="pixel-start-section" id="startGameButton">
+        <button href="{{ site.baseurl }}/about/" class="pixel-start-btn">
+            <span class="start-text">START</span>
+        </button>
+      </div>
+    </div>
+    <!-- 底部装饰区域 -->
+    <div class="pixel-bottom-section">
+      <div class="pixel-ground-line"></div>
+      <div class="pixel-ground-grass" id="pixel-bottom-decor"></div>
+      <div class="pixel-mario-avatar">
+        <img src="{{ site.baseurl }}/images/avatars/pixel-morphy.png" alt="Mario Avatar" class="mario-image">
+      </div>
+    </div>
+  </div>
+
+  <div id="main" role="main">
+    {% include sidebar.html %}
+    <article class="page-pub" itemscope itemtype="http://schema.org/CreativeWork">
+      {% if page.title %}
+      <meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{%
+      endif %}
+      <div class="page__inner-wrap">
+        <section class="page__content" itemprop="text">
+          {{ content }}
+        </section>
+      </div>
+    </article>
+  </div>
+
+  {% include scripts.html %}
+
+  <script>
+
+    // 简化的事件处理 - 现在所有按钮都指向外部页面，可以使用正常跳转
+    window.addEventListener('load', function () {
+      // 按钮跳转
+      const buttons = document.querySelectorAll('.pixel-nav-btn, .pixel-start-btn');
+      buttons.forEach(button => {
+        button.addEventListener('click', function (e) {
+          const href = button.getAttribute('data-href') || button.getAttribute('href');
+          if (href) {
+            window.location.href = href;
+          }
+      });
+    });
+
+    // 马里奥头像键盘控制
+    const avatar = document.querySelector('.pixel-mario-avatar');
+    if (!avatar) return;
+
+    const avatarHeight = avatar.offsetHeight;
+
+    // px单位实现
+    let posX = 10; // px, 初始left
+    let velocityY = 0; // px/frame
+    let jumping = false;
+    let groundBottom = getGroundBottom(); // px
+    let currentBottom = groundBottom;
+    const moveStep = 8; // px，每帧移动
+    const gravity = 3; // px per frame
+    const minLeft = 10;
+  let maxJump = window.innerHeight; // px, 最高跳跃高度
+    function maxLeft() {
+      const container = document.getElementById('pixel-about-me');
+      return container ? (container.offsetWidth - avatar.offsetWidth) : 400;
+    }
+    function getGroundBottom() {
+      const container = document.getElementById('pixel-about-me');
+      const ground = document.getElementById("pixel-bottom-decor")
+      const groundRect = ground.getBoundingClientRect();
+      const contRect = container.getBoundingClientRect();
+      // px
+      return contRect.bottom - groundRect.top; // 计算底部高度
+    }
+
+    // 获取start按钮底部的像素高度
+    function getStartBtnBottom() {
+      const btn = document.getElementById('startGameButton');
+      const container = document.getElementById('pixel-about-me');
+      if (!btn || !container) return null;
+      const btnRect = btn.getBoundingClientRect();
+      const contRect = container.getBoundingClientRect();
+      // px
+      return contRect.bottom - btnRect.bottom;
+    }
+    // 计算所有按钮的最大跳跃高度（取所有按钮底部的最小值）
+    function getMaxJumpHeight() {
+      const container = document.getElementById('pixel-about-me');
+      if (!container) return 200;
+      const btns = document.querySelectorAll('.pixel-nav-btn, .pixel-start-btn');
+      let minBtnBottom = Infinity;
+      const contRect = container.getBoundingClientRect();
+      btns.forEach(btn => {
+        const btnRect = btn.getBoundingClientRect();
+        const btnBottomPx = contRect.bottom - btnRect.bottom;
+        if (btnBottomPx < minBtnBottom) minBtnBottom = btnBottomPx;
+      });
+      if (minBtnBottom === Infinity) return 200;
+      return minBtnBottom - avatarHeight;
+    }
+    // 动态计算jumpPower
+    function getJumpPower() {
+      return Math.sqrt(2 * gravity * maxJump);
+    }
+
+    function updateAvatarPos() {
+      avatar.style.left = posX + 'px';
+      avatar.style.right = '';
+      avatar.style.bottom = currentBottom + 'px';
+    }
+    updateAvatarPos();
+
+    let movingLeft = false;
+    let movingRight = false;
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') {
+        movingLeft = true;
+      } else if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') {
+        movingRight = true;
+      } else if ((e.key === ' ' || e.key === 'ArrowUp' || e.key === 'w' || e.key === 'W') && (!jumping || onPlatform)) {
+        // onPlatform时，最大跳跃距离为avatar到窗口顶部的距离
+        if (onPlatform) {
+          const avatarRect = avatar.getBoundingClientRect();
+          maxJump = avatarRect.top;
+        } else {
+          maxJump = window.innerHeight;
+        }
+        jumping = true;
+        velocityY = getJumpPower();
+        onPlatform = false;
+        platformBtn = null;
+      }
+    });
+
+    document.addEventListener('keyup', function (e) {
+      if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') {
+        movingLeft = false;
+      } else if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') {
+        movingRight = false;
+      }
+    });
+
+    function moveLoop() {
+      if (movingLeft) {
+        posX = Math.max(posX - moveStep, minLeft);
+        updateAvatarPos();
+      }
+      if (movingRight) {
+        posX = Math.min(posX + moveStep, maxLeft());
+        updateAvatarPos();
+      }
+      requestAnimationFrame(moveLoop);
+    }
+    moveLoop();
+
+    // 互动效果：哪个按钮被avatar顶部碰到就闪烁
+    let lastFlashedBtn = null;
+    function flashBtn(btn) {
+      if (!btn) return;
+      if (lastFlashedBtn && lastFlashedBtn !== btn) {
+        lastFlashedBtn.classList.remove('pixel-btn-flash');
+      }
+      btn.classList.add('pixel-btn-flash');
+      lastFlashedBtn = btn;
+    }
+
+    // 预测下一帧avatar顶部是否穿过按钮底部（顶砖块）
+    function getBtnAvatarTopTouching(velocityY) {
+      const btns = document.querySelectorAll('.pixel-nav-btn, .pixel-start-btn');
+      if (!btns.length || !avatar) return null;
+      const avatarRect = avatar.getBoundingClientRect();
+      const nextTop = avatarRect.top - velocityY;
+      for (const btn of btns) {
+        const btnRect = btn.getBoundingClientRect();
+        const horizontallyOverlap = avatarRect.right > btnRect.left && avatarRect.left < btnRect.right;
+        if (
+          velocityY > 0 &&
+          avatarRect.top > btnRect.bottom &&
+          nextTop <= btnRect.bottom &&
+          horizontallyOverlap
+        ) {
+          return btn;
+        }
+      }
+      return null;
+    }
+
+    // 预测下一帧avatar底部是否落到按钮顶部（踩砖块）
+    function getBtnAvatarBottomLanding(velocityY) {
+      const btns = document.querySelectorAll('.pixel-nav-btn, .pixel-start-btn');
+      if (!btns.length || !avatar) return null;
+      const avatarRect = avatar.getBoundingClientRect();
+      const nextBottom = avatarRect.bottom - velocityY; // 向下为负velocityY
+      for (const btn of btns) {
+        const btnRect = btn.getBoundingClientRect();
+        const horizontallyOverlap = avatarRect.right > btnRect.left && avatarRect.left < btnRect.right;
+        if (
+          velocityY < 0 &&
+          avatarRect.bottom < btnRect.top &&
+          nextBottom >= btnRect.top &&
+          horizontallyOverlap
+        ) {
+          return btn;
+        }
+      }
+      return null;
+    }
+
+    let flashedThisJump = false;
+    function jumpToStartPage() {
+      const btn = document.getElementById('startGameButton');
+      if (!btn) return;
+      window.location.href = btn.href;
+    }
+    let jumpTimeout = null;
+    let onPlatform = false;
+    let platformBtn = null;
+    function animate() {
+      if (jumping || onPlatform) {
+        velocityY -= gravity;
+        // if (!onPlatform) {
+        //   velocityY -= gravity;
+        // } else {
+        //   velocityY = 0; // onPlatform时速度始终为0
+        // }
+        // 顶砖块
+        const touchedBtn = getBtnAvatarTopTouching(velocityY);
+        // 踩砖块
+        const landedBtn = getBtnAvatarBottomLanding(velocityY);
+        if (touchedBtn) {
+          // 顶到按钮底部
+          flashBtn(touchedBtn);
+          flashedThisJump = true;
+          const btnRect = touchedBtn.getBoundingClientRect();
+          const container = document.getElementById('pixel-about-me');
+          const contRect = container.getBoundingClientRect();
+          currentBottom = contRect.bottom - btnRect.bottom - avatar.offsetHeight;
+          velocityY = 0;
+        } else if (landedBtn && velocityY < 0) {
+          // 落地时直接对齐砖块顶部，保证一定能落到砖块上
+          onPlatform = true;
+          platformBtn = landedBtn;
+          const btnRect = landedBtn.getBoundingClientRect();
+          const container = document.getElementById('pixel-about-me');
+          const contRect = container.getBoundingClientRect();
+          currentBottom = contRect.bottom - btnRect.top;
+          velocityY = 0;
+          jumping = false;
+        } else if (onPlatform) {
+          // 检查avatar是否还在平台上，否则掉落
+          const avatarRect = avatar.getBoundingClientRect();
+          const btnRect = platformBtn ? platformBtn.getBoundingClientRect() : null;
+          const horizontallyOverlap = btnRect && avatarRect.right > btnRect.left && avatarRect.left < btnRect.right;
+          if (!platformBtn || !horizontallyOverlap || Math.abs((avatarRect.bottom) - btnRect.top) > 2) {
+            onPlatform = false;
+            platformBtn = null;
+            jumping = true;
+          }
+        } else {
+          currentBottom += velocityY;
+        }
+        // 落地重置
+        if (currentBottom <= groundBottom) {
+          currentBottom = groundBottom;
+          jumping = false;
+          onPlatform = false;
+          platformBtn = null;
+          velocityY = 0;
+          flashedThisJump = false;
+          if (lastFlashedBtn) {
+            lastFlashedBtn.classList.remove('pixel-btn-flash');
+            lastFlashedBtn = null;
+          }
+        }
+        updateAvatarPos();
+      }
+      requestAnimationFrame(animate);
+    }
+    animate();
+    });
+  </script>
+
+</body>
+
 </html>

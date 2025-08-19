@@ -8,7 +8,7 @@
           {% for link in site.data.navigation.main %}
             <li class="masthead__menu-item">
               {% if link.children %}
-                <a href="{{ domain }}{{ link.url | default: '#' }}">{{ link.title }}</a>
+                <a href="{{ domain }}{{ link.url}}">{{ link.title }}</a>
                 <ul class="masthead__submenu">
                   {% for child in link.children %}
                     <li class="masthead__submenu-item"><a href="{{ domain }}{{ child.url }}">{{ child.title }}</a></li>

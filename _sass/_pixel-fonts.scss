@@ -1,0 +1,86 @@
+/* ==========================================================================
+   中文像素化字体支持
+   ========================================================================== */
+
+/* 为中文内容添加像素化效果 */
+.pixel-text-cn {
+  font-family: "Zpix", "Fusion Pixel Font", "PixelMplus", "Press Start 2P", monospace;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
+
+/* 为英文内容添加像素化效果 */
+.pixel-text-en {
+  font-family: "Press Start 2P", "Zpix", monospace;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
+
+/* 混合中英文像素化 */
+.pixel-text-mixed {
+  font-family: "Press Start 2P", "Zpix", "Fusion Pixel Font", "Noto Sans Mono CJK SC", "Source Han Mono", monospace;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
+
+/* 通用像素化效果 */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
+
+/* 应用到特定的中文元素 */
+:lang(zh-CN),
+:lang(zh-TW),
+:lang(zh) {
+  .pixel-text,
+  .research-tag,
+  .field-label,
+  .field-value {
+    font-family: "Zpix", "Fusion Pixel Font", "Press Start 2P", "Noto Sans Mono CJK SC", monospace;
+  }
+}
+
+/* 强制像素化渲染的CSS类 */
+.force-pixel {
+  font-family: "Press Start 2P", "Zpix", "Fusion Pixel Font", monospace !important;
+  image-rendering: pixelated !important;
+  image-rendering: -moz-crisp-edges !important;
+  image-rendering: crisp-edges !important;
+  font-smooth: never !important;
+  -webkit-font-smoothing: none !important;
+  -moz-osx-font-smoothing: unset !important;
+  text-rendering: optimizeSpeed !important;
+}
+
+/* 针对不同字体大小的优化 */
+.pixel-text-small {
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.pixel-text-medium {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.pixel-text-large {
+  font-size: 14px;
+  line-height: 1.6;
+}

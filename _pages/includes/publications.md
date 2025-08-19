@@ -1,6 +1,6 @@
 <h1>Publications</h1>
 
-<h2>Conference Paper <div class='pub-note'></div></h2>
+<!-- <h2>Conference Paper <div class='pub-note'></div></h2> -->
 
 <div class='paper-box'>
 <div class='paper-box-text'>
