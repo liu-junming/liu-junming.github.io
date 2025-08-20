@@ -43,7 +43,7 @@
       <div class="pixel-ground-line"></div>
       <div class="pixel-ground-grass" id="pixel-bottom-decor"></div>
       <div class="pixel-mario-avatar">
-        <img src="{{ site.baseurl }}/images/avatars/pixel-morphy.png" alt="Mario Avatar" class="mario-image">
+        <img src="{{ site.baseurl }}/images/morphy/pixel-morphy-right.png" alt="Mario Avatar" class="mario-image">
       </div>
     </div>
   </div>
@@ -65,8 +65,6 @@
   {% include scripts.html %}
 
   <script>
-
-    // 简化的事件处理 - 现在所有按钮都指向外部页面，可以使用正常跳转
     window.addEventListener('load', function () {
       // 按钮跳转
       const buttons = document.querySelectorAll('.pixel-nav-btn, .pixel-start-btn');
@@ -80,10 +78,10 @@
     });
 
     // 马里奥头像键盘控制
-    const avatar = document.querySelector('.pixel-mario-avatar');
-    if (!avatar) return;
-
-    const avatarHeight = avatar.offsetHeight;
+  const avatar = document.querySelector('.pixel-mario-avatar');
+  if (!avatar) return;
+  const avatarImg = avatar.querySelector('.mario-image');
+  const avatarHeight = avatar.offsetHeight;
 
     // px单位实现
     let posX = 10; // px, 初始left
@@ -148,11 +146,20 @@
     let movingLeft = false;
     let movingRight = false;
 
+    let lastDirection = 'right';
     document.addEventListener('keydown', function (e) {
       if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') {
         movingLeft = true;
+        if (lastDirection !== 'left') {
+          avatarImg.src = '{{ site.baseurl }}/images/morphy/pixel-morphy-left.png';
+          lastDirection = 'left';
+        }
       } else if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') {
         movingRight = true;
+        if (lastDirection !== 'right') {
+          avatarImg.src = '{{ site.baseurl }}/images/morphy/pixel-morphy-right.png';
+          lastDirection = 'right';
+        }
       } else if ((e.key === ' ' || e.key === 'ArrowUp' || e.key === 'w' || e.key === 'W') && (!jumping || onPlatform)) {
         // onPlatform时，最大跳跃距离为avatar到窗口顶部的距离
         if (onPlatform) {
