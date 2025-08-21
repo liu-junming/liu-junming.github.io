@@ -52,7 +52,8 @@
   @include breakpoint($medium) {
     display: block !important;
   }
-  display: none !important;
+  // display: none !important;
+  display: block !important;
 }
 
 .masthead__menu-item {
