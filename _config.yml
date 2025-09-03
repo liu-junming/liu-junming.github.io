@@ -10,7 +10,7 @@ baseurl: ""
 
 # Site Settings
 title                    : "Junming Liu (刘君茗)"
-description              : "Incoming PhD student at MPI-SP"
+description              : "PhD student at MPI-SP"
 repository               : "Jamrot/junmingliu.github.io"
 google_scholar_stats_use_cdn : false
 
@@ -27,11 +27,11 @@ author:
   name             : "Junming Liu"
   avatar           : "images/avatars/avatar-realme-big.png"
   bio              : "刘君茗"
-  location         : "Hangzhou, China"
+  location         : "Bochum, Germany"
   employer         : 
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=VWst5KEAAAAJ"
-  email            : "jmliu@zju.edu.cn"
+  email            : "junming.liu@mpi-sp.org"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
