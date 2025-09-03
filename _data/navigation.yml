@@ -37,7 +37,11 @@ main:
   - title: "Posts"
     url: "/posts/"
     children:
-      - title: "All Posts"
-        url: "/posts/"
+      # - title: "All Posts"
+      #   url: "/posts/"
+      - title: "Notes"
+        url: "/notes/"
+      - title: "Fragments"
+        url: "/fragments/"
       - title: "Tags"
         url: "/tags/"

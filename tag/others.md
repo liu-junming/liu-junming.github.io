@@ -1,6 +1,6 @@
 ---
 layout: tag_page
-title: "Tag: pub-TOSEM"
-tag: pub-TOSEM
+title: "Tag: others"
+tag: others
 robots: noindex
 ---

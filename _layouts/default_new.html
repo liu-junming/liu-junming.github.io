@@ -9,10 +9,10 @@
 <body>
   {% include browser-upgrade.html %}
 
-  <!-- 正常显示导航栏 -->
+  <!-- 正常显示导航栏
   <div id="masthead-wrapper">
     {% include masthead.html %}
-  </div>
+  </div> -->
 
   <!-- 像素风 About-me 全屏部分 -->
   <div id="pixel-about-me" class="pixel-about-container">
@@ -66,6 +66,51 @@
 
   <script>
     window.addEventListener('load', function () {
+      // 添加向下滚动跳转到About页面的功能
+      let scrollThreshold = 10; // 设置触发跳转的滚动阈值
+      let isScrolling = false;
+      let lastScrollTime = Date.now();
+      let scrollDebounceDelay = 500; // 防抖延迟，防止误触发
+
+      // 页面滚动处理
+      window.addEventListener('wheel', function(e) {
+        // 如果是向下滚动，并且滚动幅度超过阈值
+        if (e.deltaY > scrollThreshold) {
+          const currentTime = Date.now();
+          // 如果距离上次滚动有一定时间，防止连续触发
+          if (currentTime - lastScrollTime > scrollDebounceDelay && !isScrolling) {
+            isScrolling = true;
+            // 跳转到About页面
+            window.location.href = '{{ site.baseurl }}/about/';
+          }
+          lastScrollTime = currentTime;
+        }
+      });
+
+      // 触摸滑动支持（移动设备）
+      let touchStartY = 0;
+      let touchEndY = 0;
+      
+      window.addEventListener('touchstart', function(e) {
+        touchStartY = e.touches[0].clientY;
+      });
+      
+      window.addEventListener('touchend', function(e) {
+        touchEndY = e.changedTouches[0].clientY;
+        const touchDelta = touchStartY - touchEndY;
+        console.log('Touch delta:', touchDelta);
+        
+        // 如果是向下滑动且幅度足够
+        if (touchDelta > scrollThreshold) {
+          const currentTime = Date.now();
+          if (currentTime - lastScrollTime > scrollDebounceDelay && !isScrolling) {
+            isScrolling = true;
+            window.location.href = '{{ site.baseurl }}/about/';
+          }
+          lastScrollTime = currentTime;
+        }
+      });
+      
       // 按钮跳转
       const buttons = document.querySelectorAll('.pixel-nav-btn, .pixel-start-btn');
       buttons.forEach(button => {
@@ -74,8 +119,10 @@
           if (href) {
             window.location.href = href;
           }
+        });
       });
-    });
+    
+    
 
     // 马里奥头像键盘控制
   const avatar = document.querySelector('.pixel-mario-avatar');
@@ -198,6 +245,8 @@
 
     // 互动效果：哪个按钮被avatar顶部碰到就闪烁
     let lastFlashedBtn = null;
+    // Star drop/collect logic
+    let stars = [];
     function flashBtn(btn) {
       if (!btn) return;
       if (lastFlashedBtn && lastFlashedBtn !== btn) {
@@ -205,6 +254,41 @@
       }
       btn.classList.add('pixel-btn-flash');
       lastFlashedBtn = btn;
+      // Always drop a star on each hit
+      dropStarFromBtn(btn);
+    }
+
+    function dropStarFromBtn(btn) {
+      const btnRect = btn.getBoundingClientRect();
+      const container = document.getElementById('pixel-about-me');
+      const contRect = container.getBoundingClientRect();
+      // Create star element
+      const star = document.createElement('img');
+      star.src = '{{ site.baseurl }}/images/morphy/star.png';
+      star.className = 'pixel-star';
+      star.style.position = 'absolute';
+      // 横向随机点
+      const starX = btnRect.left - contRect.left + Math.random() * Math.max(1, btnRect.width - 32);
+      star.style.left = starX + 'px';
+      // (2) 初始点为button下方
+      star.style.top = (btnRect.bottom - contRect.top) + 'px';
+      star.style.width = '32px';
+      star.style.height = '32px';
+      star.style.transition = 'top 0.5s cubic-bezier(0,0,.5,1)';
+      container.appendChild(star);
+      // (1) 计算ground线的Y坐标，star底部不能超过ground
+      let groundY = container.offsetHeight - 32;
+      const groundLine = container.querySelector('.pixel-ground-line');
+      if (groundLine) {
+        groundY = contRect.bottom - groundBottom - 32;
+      }
+      // 动画下落到ground
+      setTimeout(() => {
+        // star底部不能超过groundY
+        star.style.top = groundY + 'px';
+      }, 10);
+      // 不消失，直到被avatar碰到
+      stars.push(star);
     }
 
     // 预测下一帧avatar顶部是否穿过按钮底部（顶砖块）
@@ -261,11 +345,6 @@
     function animate() {
       if (jumping || onPlatform) {
         velocityY -= gravity;
-        // if (!onPlatform) {
-        //   velocityY -= gravity;
-        // } else {
-        //   velocityY = 0; // onPlatform时速度始终为0
-        // }
         // 顶砖块
         const touchedBtn = getBtnAvatarTopTouching(velocityY);
         // 踩砖块
@@ -316,6 +395,30 @@
           }
         }
         updateAvatarPos();
+      }
+      // Star collision detection
+      if (stars.length > 0) {
+        const avatarRect = avatar.getBoundingClientRect();
+        for (let i = stars.length - 1; i >= 0; i--) {
+          const star = stars[i];
+          const starRect = star.getBoundingClientRect();
+          // Simple collision: center point inside avatar
+          const starCenterX = starRect.left + starRect.width/2;
+          const starCenterY = starRect.top + starRect.height/2;
+          if (
+            starCenterX > avatarRect.left &&
+            starCenterX < avatarRect.right &&
+            starCenterY > avatarRect.top &&
+            starCenterY < avatarRect.bottom
+          ) {
+            // Star collected: glow and then slowly disappear
+            star.classList.add('pixel-star-glow');
+            setTimeout(() => {
+              if (star.parentNode) star.parentNode.removeChild(star);
+            }, 1200);
+            stars.splice(i, 1);
+          }
+        }
       }
       requestAnimationFrame(animate);
     }
