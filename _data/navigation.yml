@@ -4,14 +4,14 @@ main:
   #   url: "/"
 
   - title: "About"
-    url: "/about/"
+    url: "/"
     children:
       - title: "About Me"
-        url: "/about/#-about-me"
+        url: "/#-about-me"
       - title: "Publication"
-        url: "/about/#-publications"
+        url: "/#-publications"
       - title: "Service"
-        url: "/about/#-service"
+        url: "/#-service"
 
   # - title: "News"
   #   url: "/#-news"

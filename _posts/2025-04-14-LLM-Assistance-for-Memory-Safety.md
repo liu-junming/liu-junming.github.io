@@ -33,38 +33,3 @@ LLM Assistance for Memory Safety
 3.  使用LLM进行Replace Nested Arrays, Infer Bounds, Introduce new bounds variables，完成转换。
 
 ![](../images/posts/LLM-Assistance-for-Memory-Safety/LLM-Assistance-for-Memory-Safety-1.png)
-
----
-
-## Porting C->Checked C
-
-什么是Checked C？ Checked C里的代码可以分为两部分，checked & unchecked。checked的部分可以保证spatial memory safety，这部分只要有OOB程序就会终止。所以任何内存非法访问都是unchecked部分的问题。
-
-## 论文逻辑
-
-1.  Introduction
-
-    1.  为什么C语言memory safety很重要（很多漏洞都是由memory safety问题导致的）
-    2.  引出用于保护C语言安全的dialects，进行简单介绍，并指出存在的问题。
-    3.  引出LLM，指出LLM的优势。介绍本文结合LLM优势开发的用于port C -> Checked-C的工具，总体说明本文工具的意义。
-    4.  main contribution
-    5.  具体介绍本文的工作各部分的优势与意义（LLM，symbolic与Checked C compiler互相补足）
-    6.  该工具的future extention以及在其他任务上的应用价值
-    7.  分点介绍contributions
-
-2.  Background
-
-    *   checked C
-    *   examples of the porting process from C
-
-3.  用于Checked C inference的符号执行工具
-
-4.  本文提出的基于LLM的转换框架（MSA）
-
-5.  转换框架的应用实例
-
-6.  评估实验
-
-7.  threats to validity
-
-8.  相关文献
