@@ -14,6 +14,30 @@
         <article class="page-pub" itemscope itemtype="http://schema.org/CreativeWork">
           {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
           <div class="page__inner-wrap">
+            <div class="about-avatar">
+              <img src="/images/avatars/mofei_junming.png" alt="Profile Photo" class="avatar-image">
+
+              {% if page.author and site.data.authors[page.author] %}
+                {% assign author = site.data.authors[page.author] %}
+              {% else %}
+                {% assign author = site.author %}
+              {% endif %}
+
+              <div class="social-icons">
+                {% if author.linkedin %}
+                  <a href="https://www.linkedin.com/in/{{ author.linkedin }}" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i></a>
+                {% endif %}
+                {% if author.email %}
+                  <a href="mailto:{{ author.email }}" title="Email" target="_blank" rel="noopener noreferrer"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i></a>
+                {% endif %}
+                {% if author.github %}
+                  <a href="https://github.com/{{ author.github }}" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i></a>
+                {% endif %}
+                {% if author.googlescholar %}
+                  <a href="{{ author.googlescholar }}" title="Google Scholar" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar ai-fw" aria-hidden="true"></i></a>
+                {% endif %}
+              </div>
+            </div>
             <section class="page__content" itemprop="text">
               {{ content }}
             </section>

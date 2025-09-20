@@ -1,8 +1,8 @@
-# News 🔥
+# News
 
 <div class="news-item">
-  <div class="badge">Aug 2025</div>
-  I will join Max Planck Institute for Security and Privacy (MPI-SP) as a PhD student.
+  <div class="badge">Sep 2025</div>
+  I join <a href="https://www.mpi-sp.org">Max Planck Institute for Security and Privacy (MPI-SP)</a> as a PhD student.
 </div>
 
 <div class="news-item">
