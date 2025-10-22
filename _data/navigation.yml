@@ -39,9 +39,9 @@ main:
     children:
       # - title: "All Posts"
       #   url: "/posts/"
-      - title: "Notes"
-        url: "/notes/"
-      - title: "Fragments"
-        url: "/fragments/"
+      # - title: "Notes"
+      #   url: "/notes/"
+      # - title: "Fragments"
+      #   url: "/fragments/"
       - title: "Tags"
         url: "/tags/"
