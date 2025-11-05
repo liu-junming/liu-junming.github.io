@@ -9,7 +9,7 @@ url: "http://127.0.0.1:4000" # local url
 baseurl: ""
 
 # Site Settings
-title                    : "Junming Liu (刘君茗)"
+title                    : "Junming Liu"
 description              : "PhD student at MPI-SP"
 repository               : "Jamrot/junmingliu.github.io"
 google_scholar_stats_use_cdn : false
@@ -26,7 +26,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Junming Liu"
   avatar           : "images/avatars/avatar-realme-big.png"
-  bio              : "刘君茗"
+  bio              : ""
   location         : "Bochum, Germany"
   employer         : 
   pubmed           : 
