@@ -280,7 +280,7 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: $masthead-link-color-hover transparent;
+      border-color: #fff transparent;
       display: block;
       z-index: 0;
     }
@@ -296,6 +296,7 @@
       border-color: #fff transparent;
       display: block;
       z-index: 1;
+      filter: drop-shadow(0 -8px 4px rgba(#000, 0.20));
     }
 
     li {

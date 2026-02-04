@@ -16,7 +16,7 @@
         <meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">
         <header class="post_page-header">
           <h1>{{ page.title }}</h1>
-          <p class="post-author">Author: {{ page.author }}</p>
+          <!-- <p class="post-author">Author: {{ page.author }}</p> -->
           <p class="post-date">Update: {{ page.date | date: "%B %d, %Y" }}</p>
           <p class="post-link">Paper: <a href="{{ page.link }}">{{ page.link }}</a></p>
           <p class="post-link">Code: <a href="{{ page.code }}">{{ page.code }}</a></p>

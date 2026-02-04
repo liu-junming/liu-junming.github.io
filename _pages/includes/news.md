@@ -1,8 +1,18 @@
 # News
 
 <div class="news-item">
+  <div class="badge">Nov 2025</div>
+  I will serve as an Artifact Evaluation Committee member of <a href="https://www.usenix.org/conference/usenixsecurity26/call-for-artifacts">USENIX Security 2026</a>.
+</div>
+
+<div class="news-item">
   <div class="badge">Sep 2025</div>
-  I join <a href="https://www.mpi-sp.org">Max Planck Institute for Security and Privacy (MPI-SP)</a> as a PhD student.
+  I am recognized as Noteworthy Reviewer in the <a href="https://secartifacts.github.io/usenixsec2025/awards#-noteworthy-reviewer-recognition">USENIX Security 2025 AEC</a>.
+</div>
+
+<div class="news-item">
+  <div class="badge">Sep 2025</div>
+  Join <a href="https://www.mpi-sp.org">Max Planck Institute for Security and Privacy (MPI-SP)</a> as a PhD student.
 </div>
 
 <div class="news-item">
