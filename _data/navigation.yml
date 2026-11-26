@@ -34,14 +34,14 @@ main:
   # - title: "Internships"
   #   url: "/#-internships"
 
-  - title: "Posts"
-    url: "/posts/"
-    children:
+  # - title: "Posts"
+  #   url: "/posts/"
+  #   children:
       # - title: "All Posts"
       #   url: "/posts/"
       # - title: "Notes"
       #   url: "/notes/"
       # - title: "Fragments"
       #   url: "/fragments/"
-      - title: "Tags"
-        url: "/tags/"
+      # - title: "Tags"
+      #   url: "/tags/"
