@@ -1,6 +1,6 @@
 ---
 layout: tag_page
-title: "Tag: arrival"
-tag: arrival
+title: "Tag: LLM4static"
+tag: LLM4static
 robots: noindex
 ---
