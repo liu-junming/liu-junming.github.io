@@ -10,12 +10,11 @@
     {% include masthead.html %}
 
     <div id="main" role="main">
-        {% include sidebar.html %}
         <article class="page-pub" itemscope itemtype="http://schema.org/CreativeWork">
           {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
           <div class="page__inner-wrap">
             <div class="about-avatar">
-              <img src="/images/avatars/mofei_junming.png" alt="Profile Photo" class="avatar-image">
+              <img src="/images/avatars/junming.jpg" alt="Profile Photo" class="avatar-image">
 
               {% if page.author and site.data.authors[page.author] %}
                 {% assign author = site.data.authors[page.author] %}

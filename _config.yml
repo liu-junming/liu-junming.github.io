@@ -12,10 +12,7 @@ baseurl: ""
 title                    : "Junming Liu"
 description              : "PhD student at MPI-SP"
 repository               : "Jamrot/junmingliu.github.io"
-google_scholar_stats_use_cdn : false
 
-# google analytics
-google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
 
 # SEO Related
 google_site_verification :  "7FnlxsiRZl1bzy3W99a7yIWitGnBcvVBoYdYxvtHTIw" # get google_site_verification from https://search.google.com/search-console/about
@@ -25,7 +22,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Junming Liu"
-  avatar           : "images/avatars/avatar-realme-big.png"
+  avatar           :
   bio              : ""
   location         : "Bochum, Germany"
   employer         : 
@@ -67,10 +64,11 @@ include:
   - .htaccess
   - _pages
   - files
-  - _posts
 exclude:
+  - _pages/includes
   - docs
-  - google_scholar_crawler
+  - run_server.sh
+  - post_ignore
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
@@ -85,8 +83,6 @@ exclude:
   - LICENSE
   - README
   - Rakefile
-  - assets/js/_main.js
-  - assets/js/plugins
   - assets/js/vendor
   - config
   - gulpfile.js
@@ -128,7 +124,6 @@ defaults:
       path: ""
       type: pages
     values:
-      layout: default_new
       author_profile: false
 
 
@@ -145,19 +140,13 @@ timezone: Asia/Shanghai # http://en.wikipedia.org/wiki/List_of_tz_database_time_
 
 # Plugins
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
   - jekyll-redirect-from
-  - simple-jekyll-search
-  # - jekyll-tagging
 # mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
   - jemoji
 
 
@@ -167,13 +156,3 @@ compress_html:
   clippings: all
   ignore:
     envs: development
-
-
-collections:
-  posts:
-    output: true
-    # permalink: /:categories/:year/:month/:day/:title/
-    permalink: /:title/
-
-# tag_page_layout: tag_page
-tag_page_dir: tag
